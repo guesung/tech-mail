@@ -1,6 +1,13 @@
 "use client";
-import { useState } from "react";
-import type { BlogInfo } from "../constants/blog";
+import React from "react";
+import { useForm, Controller } from "react-hook-form";
+
+interface BlogInfo {
+  name: string;
+  rssUrl: string;
+  websiteUrl: string;
+  ogImage: string;
+}
 import { Card } from "./ui/card";
 import { Input } from "./ui/input";
 import { Checkbox } from "./ui/checkbox";
@@ -10,74 +17,93 @@ interface Props {
   blogs: BlogInfo[];
 }
 
-export default function SubscribeForm({ blogs }: Props) {
-  const [email, setEmail] = useState("");
-  const [selected, setSelected] = useState<string[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<string | null>(null);
-  const [error, setError] = useState(false);
+interface FormValues {
+  email: string;
+  rssUrls: string[];
+}
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
+export default function SubscribeForm({ blogs }: Props) {
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { isSubmitting },
+    watch,
+    setError,
+    reset,
+  } = useForm<FormValues>({
+    defaultValues: { email: "", rssUrls: [] },
+  });
+  const [result, setResult] = React.useState<string | null>(null);
+  const [error, setErrorState] = React.useState(false);
+
+  const onSubmit = async (data: FormValues) => {
     setResult(null);
-    setError(false);
+    setErrorState(false);
     const res = await fetch("/api/subscribe", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, rssUrls: selected }),
+      body: JSON.stringify(data),
     });
     if (res.ok) {
       setResult("구독이 완료되었습니다!");
-      setError(false);
+      setErrorState(false);
+      reset();
     } else {
       setResult("구독에 실패했습니다.");
-      setError(true);
+      setErrorState(true);
     }
-    setLoading(false);
   };
 
   return (
     <Card className="p-6 mb-4">
-      <form onSubmit={handleSubmit} className="space-y-4 text-gray-900">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="space-y-4 text-gray-900"
+      >
+        <label className="block">
+          <span className="block mb-1 font-medium">구독할 블로그</span>
+          <Controller
+            control={control}
+            name="rssUrls"
+            render={({ field }: { field: any }) => (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {blogs.map((blog) => (
+                  <label key={blog.rssUrl} className="flex items-center gap-2">
+                    <Checkbox
+                      checked={field.value.includes(blog.rssUrl)}
+                      onCheckedChange={(checked) => {
+                        if (checked) {
+                          field.onChange([...field.value, blog.rssUrl]);
+                        } else {
+                          field.onChange(
+                            field.value.filter(
+                              (id: string) => id !== blog.rssUrl
+                            )
+                          );
+                        }
+                      }}
+                      id={blog.rssUrl}
+                    />
+                    <span className="text-gray-900">{blog.name}</span>
+                  </label>
+                ))}
+              </div>
+            )}
+          />
+        </label>
         <label className="block">
           <span className="block mb-1 font-medium">이메일</span>
           <Input
             type="email"
             required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
             placeholder="your@email.com"
             className="mb-2"
+            {...register("email", { required: true })}
           />
         </label>
-        <label className="block">
-          <span className="block mb-1 font-medium">구독할 블로그</span>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            {blogs.map((blog) => (
-              <label key={blog.rssUrl} className="flex items-center gap-2">
-                <Checkbox
-                  checked={selected.includes(blog.rssUrl)}
-                  onCheckedChange={(checked) => {
-                    setSelected((sel) =>
-                      checked
-                        ? [...sel, blog.rssUrl]
-                        : sel.filter((id) => id !== blog.rssUrl)
-                    );
-                  }}
-                  id={blog.rssUrl}
-                />
-                <span className="text-gray-900">{blog.name}</span>
-              </label>
-            ))}
-          </div>
-        </label>
-        <Button
-          type="submit"
-          disabled={loading || !email || selected.length === 0}
-          className="w-full"
-        >
-          {loading ? "구독 중..." : "구독하기"}
+        <Button type="submit" disabled={isSubmitting} className="w-full">
+          {isSubmitting ? "구독 중..." : "구독하기"}
         </Button>
         {result && (
           <div
