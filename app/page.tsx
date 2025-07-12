@@ -1,6 +1,7 @@
-import { supabase } from "@/app/lib/supabase";
-import { Blog } from "@/app/types/blog";
+import { supabase } from "@/lib/supabase";
+import { Blog } from "@/types/blog";
 import SubscribeForm from "./components/SubscribeForm";
+import UnsubscribeForm from "./components/UnsubscribeForm";
 
 export default async function Home() {
   // SSR: 블로그 목록 조회
@@ -17,6 +18,8 @@ export default async function Home() {
         받을 수 있습니다.
       </p>
       <SubscribeForm blogs={blogs ?? []} />
+      <h2 className="text-lg font-semibold mt-12 mb-2">구독 해지</h2>
+      <UnsubscribeForm />
     </main>
   );
 }
