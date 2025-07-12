@@ -1,6 +1,11 @@
 "use client";
 import React from "react";
-import { useForm, Controller } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
+import { Button } from "./ui/button";
+import { Card } from "./ui/card";
+import { Checkbox } from "./ui/checkbox";
+import { Input } from "./ui/input";
+import { supabase } from "../lib/supabase";
 
 interface BlogInfo {
   name: string;
@@ -8,10 +13,6 @@ interface BlogInfo {
   websiteUrl: string;
   ogImage: string;
 }
-import { Card } from "./ui/card";
-import { Input } from "./ui/input";
-import { Checkbox } from "./ui/checkbox";
-import { Button } from "./ui/button";
 
 interface Props {
   blogs: BlogInfo[];
@@ -40,12 +41,15 @@ export default function SubscribeForm({ blogs }: Props) {
   const onSubmit = async (data: FormValues) => {
     setResult(null);
     setErrorState(false);
-    const res = await fetch("/api/subscribe", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-    if (res.ok) {
+    const { error } = await supabase.from("subscribers").upsert(
+      {
+        email: data.email,
+        subscribed_blog_ids: data.rssUrls,
+        is_active: true,
+      },
+      { onConflict: "email" }
+    );
+    if (!error) {
       setResult("구독이 완료되었습니다!");
       setErrorState(false);
       reset();
