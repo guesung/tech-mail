@@ -1,6 +1,5 @@
 "use client";
-import { checkRss } from "@/app/api/cron/check-rss/route";
-import React, { useEffect } from "react";
+import React from "react";
 import { Controller, useForm } from "react-hook-form";
 import { supabase } from "../lib/supabase";
 import { Button } from "./ui/button";
@@ -30,8 +29,6 @@ export default function SubscribeForm({ blogs }: Props) {
     handleSubmit,
     control,
     formState: { isSubmitting },
-    watch,
-    setError,
     reset,
   } = useForm<FormValues>({
     defaultValues: { email: "", rssUrls: [] },
@@ -39,11 +36,11 @@ export default function SubscribeForm({ blogs }: Props) {
   const [result, setResult] = React.useState<string | null>(null);
   const [error, setErrorState] = React.useState(false);
 
-  useEffect(() => {
-    (async () => {
-      checkRss();
-    })();
-  }, []);
+  // useEffect(() => {
+  //   (async () => {
+  //     checkRss();
+  //   })();
+  // }, []);
 
   const onSubmit = async (data: FormValues) => {
     setResult(null);
@@ -77,7 +74,7 @@ export default function SubscribeForm({ blogs }: Props) {
           <Controller
             control={control}
             name="rssUrls"
-            render={({ field }: { field: any }) => (
+            render={({ field }) => (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {blogs.map((blog) => (
                   <label key={blog.rssUrl} className="flex items-center gap-2">

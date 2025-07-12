@@ -1,5 +1,5 @@
 import Parser from "rss-parser";
-import type { Article } from "../types/article";
+import type { Article } from "@/types";
 
 export async function fetchRssFeed(url: string) {
   const parser = new Parser();
@@ -7,8 +7,7 @@ export async function fetchRssFeed(url: string) {
   return feed.items.map(
     (item) =>
       ({
-        // id: "", // DB 저장 시 생성
-        blog_id: "", // 호출부에서 할당
+        blog_id: "",
         title: item.title ?? "",
         url: item.link ?? "",
         description: item.contentSnippet ?? item.content ?? "",

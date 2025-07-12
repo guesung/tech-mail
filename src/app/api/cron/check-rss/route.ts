@@ -1,33 +1,10 @@
+import { getSubscribers } from "@/apis/supabase";
 import { sendEmail } from "@/lib/email";
-import { fetchRssFeed } from "@/lib/rss-parser";
-import { supabase } from "@/lib/supabase";
-import type { Article } from "@/types/article";
-import type { Blog } from "@/types/blog";
-import type { Subscriber } from "@/types/subscriber";
+import type { Article } from "@/types";
 
 export const dynamic = "force-dynamic";
 
-export const getBlogs = async (): Promise<Blog[]> => {
-  const { data: blogs, error: blogError } = await supabase
-    .from("blogs")
-    .select("*")
-    .eq("is_active", true);
-  if (blogError) throw new Error(blogError.message);
-  if (!blogs) throw new Error("No blogs found");
-  return blogs;
-};
-
-export const getSubscribers = async (): Promise<Subscriber[]> => {
-  const { data: subscribers, error: subError } = await supabase
-    .from("subscribers")
-    .select("*")
-    .eq("is_active", true);
-  if (subError) throw new Error(subError.message);
-  if (!subscribers) throw new Error("No subscribers found");
-  return subscribers;
-};
-
-export const checkRss = async () => {
+const checkRss = async () => {
   // const blogs = await getBlogs();
   // const subscribers = await getSubscribers();
 
@@ -90,13 +67,14 @@ export const checkRss = async () => {
     const html = `<h2>새 글 알림</h2><ul>${targetArticles.map((a) => `<li><a href="${a.url}">${a.title}</a></li>`).join("")}</ul>`;
 
     try {
-      await sendEmail({
+      const result = await sendEmail({
         to: sub.email,
         subject: "[TechMail] 구독한 블로그 새 글 알림",
         html,
       });
-      console.log(html);
+      console.log(result);
     } catch (e) {
+      console.log(e);
       continue;
     }
   }
