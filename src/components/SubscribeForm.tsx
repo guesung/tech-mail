@@ -1,11 +1,12 @@
 "use client";
-import React from "react";
+import { checkRss } from "@/app/api/cron/check-rss/route";
+import React, { useEffect } from "react";
 import { Controller, useForm } from "react-hook-form";
+import { supabase } from "../lib/supabase";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 import { Checkbox } from "./ui/checkbox";
 import { Input } from "./ui/input";
-import { supabase } from "../lib/supabase";
 
 interface BlogInfo {
   name: string;
@@ -37,6 +38,12 @@ export default function SubscribeForm({ blogs }: Props) {
   });
   const [result, setResult] = React.useState<string | null>(null);
   const [error, setErrorState] = React.useState(false);
+
+  useEffect(() => {
+    (async () => {
+      checkRss();
+    })();
+  }, []);
 
   const onSubmit = async (data: FormValues) => {
     setResult(null);
