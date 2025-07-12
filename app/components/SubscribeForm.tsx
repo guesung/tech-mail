@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
-import { Blog } from "@/types/blog";
+import type { BlogInfo } from "./blogs";
 
 interface Props {
-  blogs: Blog[];
+  blogs: BlogInfo[];
 }
 
 export default function SubscribeForm({ blogs }: Props) {
@@ -21,7 +21,7 @@ export default function SubscribeForm({ blogs }: Props) {
     const res = await fetch("/api/subscribe", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, blogIds: selected }),
+      body: JSON.stringify({ email, rssUrls: selected }),
     });
     if (res.ok) {
       setResult("구독이 완료되었습니다!");
@@ -53,16 +53,16 @@ export default function SubscribeForm({ blogs }: Props) {
         <span className="block mb-1 font-medium">구독할 블로그</span>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {blogs.map((blog) => (
-            <label key={blog.id} className="flex items-center gap-2">
+            <label key={blog.rss_url} className="flex items-center gap-2">
               <input
                 type="checkbox"
-                value={blog.id}
-                checked={selected.includes(blog.id)}
+                value={blog.rss_url}
+                checked={selected.includes(blog.rss_url)}
                 onChange={(e) => {
                   setSelected((sel) =>
                     e.target.checked
-                      ? [...sel, blog.id]
-                      : sel.filter((id) => id !== blog.id)
+                      ? [...sel, blog.rss_url]
+                      : sel.filter((id) => id !== blog.rss_url)
                   );
                 }}
                 className="accent-blue-600"

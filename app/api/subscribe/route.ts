@@ -1,14 +1,14 @@
-import { supabase } from "@/app/lib/supabase";
+import { supabase } from "@/lib/supabase";
 import { NextResponse } from "next/server";
 
 interface SubscribeBody {
   email: string;
-  blogIds: string[];
+  rssUrls: string[];
 }
 
 export async function POST(req: Request) {
   const body = (await req.json()) as SubscribeBody;
-  if (!body.email || !Array.isArray(body.blogIds)) {
+  if (!body.email || !Array.isArray(body.rssUrls)) {
     return NextResponse.json({ error: "Invalid request" }, { status: 400 });
   }
   const { data, error } = await supabase
@@ -16,7 +16,7 @@ export async function POST(req: Request) {
     .upsert(
       {
         email: body.email,
-        subscribed_blog_ids: body.blogIds,
+        subscribed_blog_ids: body.rssUrls,
         is_active: true,
       },
       { onConflict: "email" }
