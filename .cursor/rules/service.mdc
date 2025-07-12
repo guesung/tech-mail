@@ -32,23 +32,29 @@ RSS 피드를 활용한 기술 블로그 구독 서비스. 사용자가 관심 �
 ### 파일 구조
 
 ```
-src/
-├── app/
-│   ├── api/
-│   │   ├── cron/
-│   │   │   └── check-rss/
-│   │   ├── blogs/
-│   │   ├── subscribe/
-│   │   └── unsubscribe/
-│   ├── components/
-│   ├── lib/
-│   │   ├── supabase.ts
-│   │   ├── rss-parser.ts
-│   │   └── email.ts
-│   └── types/
-├── database/
-│   └── schema.sql
-└── vercel.json
+app/
+├── api/
+│   ├── cron/
+│   │   └── check-rss/
+│   ├── blogs/
+│   ├── subscribe/
+│   └── unsubscribe/
+├── components/
+├── lib/
+│   ├── supabase.ts
+│   ├── rss-parser.ts
+│   └── email.ts
+├── types/
+│   ├── ...
+│
+├── page.tsx
+├── layout.tsx
+├── globals.css
+├── favicon.ico
+
+database/
+└── schema.sql
+vercel.json
 ```
 
 ### 데이터베이스 스키마
