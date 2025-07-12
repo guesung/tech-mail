@@ -1,6 +1,6 @@
-import { BLOGS } from "./components/blogs";
-import SubscribeForm from "./components/SubscribeForm";
-import UnsubscribeForm from "./components/UnsubscribeForm";
+import BLOGS from "@/data/blogs.json";
+import SubscribeForm from "@/components/SubscribeForm";
+import UnsubscribeForm from "@/components/UnsubscribeForm";
 
 export default function Home() {
   return (
@@ -11,8 +11,8 @@ export default function Home() {
         받을 수 있습니다.
       </p>
       <SubscribeForm blogs={BLOGS} />
-      <h2 className="text-lg font-semibold mt-12 mb-2">구독 해지</h2>
-      <UnsubscribeForm />
+      {/* <h2 className="text-lg font-semibold mt-12 mb-2">구독 해지</h2> */}
+      {/* <UnsubscribeForm /> */}
     </main>
   );
 }

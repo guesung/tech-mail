@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import type { BlogInfo } from "./blogs";
+import type { BlogInfo } from "../constants/blog";
 import { Card } from "./ui/card";
 import { Input } from "./ui/input";
 import { Checkbox } from "./ui/checkbox";

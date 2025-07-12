@@ -1,0 +1,164 @@
+[
+  {
+    "name": "무신사",
+    "rssUrl": "https://medium.com/feed/musinsa-tech",
+    "websiteUrl": "https://medium.com/musinsa-tech",
+    "ogImage": "https://cdn-images-1.medium.com/max/1200/1*Qs-0adxK8doDYyzZXMXkmg.png"
+  },
+  {
+    "name": "네이버 D2",
+    "rssUrl": "https://d2.naver.com/d2.atom",
+    "websiteUrl": "https://d2.naver.com/home",
+    "ogImage": "https://d2.naver.com/home/favicon.ico"
+  },
+  {
+    "name": "마켓컬리",
+    "rssUrl": "https://helloworld.kurly.com/feed.xml",
+    "websiteUrl": "https://helloworld.kurly.com/",
+    "ogImage": "http://thefarmersfront.github.io/assets/logo-square.png"
+  },
+  {
+    "name": "우아한형제들",
+    "rssUrl": "https://techblog.woowahan.com/feed/",
+    "websiteUrl": "https://techblog.woowahan.com/",
+    "ogImage": "https://techblog.woowa.in/wp-content/uploads/2023/02/2023-우아한테크-로고-2-e1675772695839.png"
+  },
+  {
+    "name": "카카오엔터프라이즈",
+    "rssUrl": "https://tech.kakaoenterprise.com/feed",
+    "websiteUrl": "https://tech.kakaoenterprise.com/",
+    "ogImage": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ftistory1.daumcdn.net%2Ftistory%2F3769165%2Fattach%2Fb1fa9f8c61f847e38985e272eba3ad33"
+  },
+  {
+    "name": "데브시스터즈",
+    "rssUrl": "https://tech.devsisters.com/rss.xml",
+    "websiteUrl": "https://tech.devsisters.com/",
+    "ogImage": "https://tech.devsisters.com/opengraph.png"
+  },
+  {
+    "name": "라인",
+    "rssUrl": "https://engineering.linecorp.com/ko/feed/index.html",
+    "websiteUrl": "https://engineering.linecorp.com/",
+    "ogImage": "/icons/icon-48x48.png?v=6d6085f233d02c34273fa8a8849b502a"
+  },
+  {
+    "name": "당근마켓",
+    "rssUrl": "https://medium.com/feed/daangn",
+    "websiteUrl": "https://medium.com/daangn",
+    "ogImage": "https://cdn-images-1.medium.com/max/1200/1*Bm8_nGjfNiKV0PASwiPELg.png"
+  },
+  {
+    "name": "토스",
+    "rssUrl": "https://toss.tech/rss.xml",
+    "websiteUrl": "https://toss.tech/",
+    "ogImage": "https://static.toss.im/assets/tech-blog/og-image/techblog-og.png?v=2"
+  },
+  {
+    "name": "직방",
+    "rssUrl": "https://medium.com/feed/zigbang",
+    "websiteUrl": "https://medium.com/zigbang",
+    "ogImage": "https://miro.medium.com/v2/resize:fit:1000/1*LbSjHv9t1FgET6vfrG76Ug.png"
+  },
+  {
+    "name": "WATCHA",
+    "rssUrl": "https://medium.com/feed/watcha",
+    "websiteUrl": "https://medium.com/watcha",
+    "ogImage": "https://miro.medium.com/v2/resize:fill:1024:539/1*3YwZ4pRivcBi8nWl7u98gA.png"
+  },
+  {
+    "name": "뱅크샐러드",
+    "rssUrl": "https://blog.banksalad.com/rss.xml",
+    "websiteUrl": "https://blog.banksalad.com/",
+    "ogImage": "https://cdn.banksalad.com/app/meta/introduce-a/og_blog.png"
+  },
+  {
+    "name": "Hyperconnect",
+    "rssUrl": "https://hyperconnect.github.io/feed.xml",
+    "websiteUrl": "https://hyperconnect.github.io/",
+    "ogImage": "https://hyperconnect.github.io/assets/opengraph_default_image.jpg"
+  },
+  {
+    "name": "쏘카",
+    "rssUrl": "https://tech.socarcorp.kr/feed",
+    "websiteUrl": "https://tech.socarcorp.kr/",
+    "ogImage": "https://tech.socarcorp.kr/assets/images/home-bg-main-1.png"
+  },
+  {
+    "name": "리디",
+    "rssUrl": "https://www.ridicorp.com/feed",
+    "websiteUrl": "https://www.ridicorp.com/",
+    "ogImage": "https://ridicorp.com/wp-content/uploads/2022/03/metaimage_ridi-crop.png"
+  },
+  {
+    "name": "NHN Cloud",
+    "rssUrl": "https://meetup.toast.com/rss",
+    "websiteUrl": "https://meetup.toast.com/",
+    "ogImage": "https://meetup.nhncloud.com/resources/img/@banner.png"
+  },
+  {
+    "name": "넷마블",
+    "rssUrl": "https://netmarble.engineering/feed/",
+    "websiteUrl": "https://netmarble.engineering/",
+    "ogImage": "https://netmarble.engineering/wp-content/uploads/2021/11/netmarble_engineering_og.png"
+  },
+  {
+    "name": "Dable",
+    "rssUrl": "https://teamdable.github.io/techblog/feed.xml",
+    "websiteUrl": "https://teamdable.github.io/techblog/",
+    "ogImage": "favicon.png"
+  },
+  {
+    "name": "카카오",
+    "rssUrl": "https://tech.kakao.com/feed/",
+    "websiteUrl": "https://tech.kakao.com/",
+    "ogImage": "https://t1.kakaocdn.net/kakao_tech/resources/static/kakaoTech.jpg"
+  },
+  {
+    "name": "티빙",
+    "rssUrl": "https://medium.com/feed/tving-team",
+    "websiteUrl": "https://medium.com/tving-team",
+    "ogImage": "https://miro.medium.com/v2/resize:fill:1200:632/1*MIujANBH38HbdMF-VJHfqQ.png"
+  },
+  {
+    "name": "드라마앤컴퍼니",
+    "rssUrl": "https://blog.dramancompany.com/feed/",
+    "websiteUrl": "https://blog.dramancompany.com/",
+    "ogImage": "https://miro.medium.com/v2/resize:fit:1200/1*dzJuDXMLpZynG6c1H8AIIA.png"
+  },
+  {
+    "name": "지마켓",
+    "rssUrl": "https://ebay-korea.tistory.com/rss",
+    "websiteUrl": "https://ebay-korea.tistory.com/",
+    "ogImage": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ftistory1.daumcdn.net%2Ftistory%2F4067742%2Fattach%2F339440313972411f88d1816a3a4ef145"
+  },
+  {
+    "name": "elecle",
+    "rssUrl": "http://medium.com/feed/elecle-bike",
+    "websiteUrl": "http://medium.com/elecle-bike",
+    "ogImage": "https://cdn-images-1.medium.com/max/1200/1*Rk-6lN59olOw4LI4nYYO2Q.png"
+  },
+  {
+    "name": "리눅서",
+    "rssUrl": "https://linuxer.name/feed/",
+    "websiteUrl": "https://linuxer.name/",
+    "ogImage": "https://linuxer.name/wp-content/uploads/2023/12/cropped-KakaoTalk_Photo_2023-12-31-22-09-40-200x200.jpeg"
+  },
+  {
+    "name": "Outsider",
+    "rssUrl": "http://feeds2.feedburner.com/rss_outsider_dev",
+    "websiteUrl": "https://blog.outsider.ne.kr/",
+    "ogImage": "http://blog.outsider.ne.kr/skin/blog/anti_verbose/images/title-image.jpg"
+  },
+  {
+    "name": "향로",
+    "rssUrl": "https://jojoldu.tistory.com/rss",
+    "websiteUrl": "https://jojoldu.tistory.com/",
+    "ogImage": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ftistory1.daumcdn.net%2Ftistory%2F1826700%2Fattach%2F4efe20086b2d444e9f65dee7d24265af"
+  },
+  {
+    "name": "Marcin Cuber",
+    "rssUrl": "https://medium.com/feed/@marcincuber",
+    "websiteUrl": "https://medium.com/@marcincuber",
+    "ogImage": "https://miro.medium.com/v2/resize:fit:2400/1*mCzi7bnF1GW0a8S1RsC87A.jpeg"
+  }
+]
