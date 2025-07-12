@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Blog } from "@/app/types/blog";
+import { Blog } from "@/types/blog";
 
 interface Props {
   blogs: Blog[];
@@ -36,7 +36,7 @@ export default function SubscribeForm({ blogs }: Props) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-4 bg-gray-50 rounded shadow p-6 border border-gray-200"
+      className="space-y-4 bg-gray-50 rounded shadow p-6 border border-gray-200 text-gray-900"
     >
       <label className="block">
         <span className="block mb-1 font-medium">이메일</span>
@@ -45,7 +45,7 @@ export default function SubscribeForm({ blogs }: Props) {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 px-3 py-2 rounded outline-none transition"
+          className="w-full border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 px-3 py-2 rounded outline-none transition text-gray-900 bg-white"
           placeholder="your@email.com"
         />
       </label>
@@ -67,7 +67,7 @@ export default function SubscribeForm({ blogs }: Props) {
                 }}
                 className="accent-blue-600"
               />
-              <span>{blog.name}</span>
+              <span className="text-gray-900">{blog.name}</span>
             </label>
           ))}
         </div>
