@@ -1,8 +1,8 @@
 export interface Blog {
   id: string;
   name: string;
-  rss_url: string;
-  website_url?: string;
+  rssUrl: string;
+  websiteUrl?: string;
   description?: string;
   category?: string;
   logo_url?: string;

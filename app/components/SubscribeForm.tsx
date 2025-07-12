@@ -1,6 +1,10 @@
 "use client";
 import { useState } from "react";
 import type { BlogInfo } from "./blogs";
+import { Card } from "./ui/card";
+import { Input } from "./ui/input";
+import { Checkbox } from "./ui/checkbox";
+import { Button } from "./ui/button";
 
 interface Props {
   blogs: BlogInfo[];
@@ -34,58 +38,55 @@ export default function SubscribeForm({ blogs }: Props) {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="space-y-4 bg-gray-50 rounded shadow p-6 border border-gray-200 text-gray-900"
-    >
-      <label className="block">
-        <span className="block mb-1 font-medium">이메일</span>
-        <input
-          type="email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="w-full border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 px-3 py-2 rounded outline-none transition text-gray-900 bg-white"
-          placeholder="your@email.com"
-        />
-      </label>
-      <label className="block">
-        <span className="block mb-1 font-medium">구독할 블로그</span>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-          {blogs.map((blog) => (
-            <label key={blog.rss_url} className="flex items-center gap-2">
-              <input
-                type="checkbox"
-                value={blog.rss_url}
-                checked={selected.includes(blog.rss_url)}
-                onChange={(e) => {
-                  setSelected((sel) =>
-                    e.target.checked
-                      ? [...sel, blog.rss_url]
-                      : sel.filter((id) => id !== blog.rss_url)
-                  );
-                }}
-                className="accent-blue-600"
-              />
-              <span className="text-gray-900">{blog.name}</span>
-            </label>
-          ))}
-        </div>
-      </label>
-      <button
-        type="submit"
-        disabled={loading || !email || selected.length === 0}
-        className="w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white py-2 rounded font-semibold disabled:opacity-50 transition"
-      >
-        {loading ? "구독 중..." : "구독하기"}
-      </button>
-      {result && (
-        <div
-          className={`mt-2 text-center font-semibold ${error ? "text-red-600" : "text-green-700"}`}
+    <Card className="p-6 mb-4">
+      <form onSubmit={handleSubmit} className="space-y-4 text-gray-900">
+        <label className="block">
+          <span className="block mb-1 font-medium">이메일</span>
+          <Input
+            type="email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="your@email.com"
+            className="mb-2"
+          />
+        </label>
+        <label className="block">
+          <span className="block mb-1 font-medium">구독할 블로그</span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {blogs.map((blog) => (
+              <label key={blog.rssUrl} className="flex items-center gap-2">
+                <Checkbox
+                  checked={selected.includes(blog.rssUrl)}
+                  onCheckedChange={(checked) => {
+                    setSelected((sel) =>
+                      checked
+                        ? [...sel, blog.rssUrl]
+                        : sel.filter((id) => id !== blog.rssUrl)
+                    );
+                  }}
+                  id={blog.rssUrl}
+                />
+                <span className="text-gray-900">{blog.name}</span>
+              </label>
+            ))}
+          </div>
+        </label>
+        <Button
+          type="submit"
+          disabled={loading || !email || selected.length === 0}
+          className="w-full"
         >
-          {result}
-        </div>
-      )}
-    </form>
+          {loading ? "구독 중..." : "구독하기"}
+        </Button>
+        {result && (
+          <div
+            className={`mt-2 text-center font-semibold ${error ? "text-red-600" : "text-green-700"}`}
+          >
+            {result}
+          </div>
+        )}
+      </form>
+    </Card>
   );
 }

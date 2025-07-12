@@ -1,5 +1,5 @@
-import { supabase } from "@/app/lib/supabase";
-import type { Blog } from "@/app/types/blog";
+import { supabase } from "@/lib/supabase";
+import type { Blog } from "@/types/blog";
 import { NextResponse } from "next/server";
 
 export async function GET() {

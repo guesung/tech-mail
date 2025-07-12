@@ -1,5 +1,8 @@
 "use client";
 import { useState } from "react";
+import { Card } from "./ui/card";
+import { Input } from "./ui/input";
+import { Button } from "./ui/button";
 
 export default function UnsubscribeForm() {
   const [email, setEmail] = useState("");
@@ -28,35 +31,30 @@ export default function UnsubscribeForm() {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="space-y-4 bg-gray-50 rounded shadow p-6 mt-8 border border-gray-200 text-gray-900"
-    >
-      <label className="block">
-        <span className="block mb-1 font-medium">이메일</span>
-        <input
-          type="email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="w-full border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 px-3 py-2 rounded outline-none transition text-gray-900 bg-white"
-          placeholder="your@email.com"
-        />
-      </label>
-      <button
-        type="submit"
-        disabled={loading || !email}
-        className="w-full bg-red-600 hover:bg-red-700 active:bg-red-800 text-white py-2 rounded font-semibold disabled:opacity-50 transition"
-      >
-        {loading ? "처리 중..." : "구독 해지하기"}
-      </button>
-      {result && (
-        <div
-          className={`mt-2 text-center font-semibold ${error ? "text-red-600" : "text-green-700"}`}
-        >
-          {result}
-        </div>
-      )}
-    </form>
+    <Card className="p-6 mt-8">
+      <form onSubmit={handleSubmit} className="space-y-4 text-gray-900">
+        <label className="block">
+          <span className="block mb-1 font-medium">이메일</span>
+          <Input
+            type="email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="your@email.com"
+            className="mb-2"
+          />
+        </label>
+        <Button type="submit" disabled={loading || !email} className="w-full">
+          {loading ? "처리 중..." : "구독 해지하기"}
+        </Button>
+        {result && (
+          <div
+            className={`mt-2 text-center font-semibold ${error ? "text-red-600" : "text-green-700"}`}
+          >
+            {result}
+          </div>
+        )}
+      </form>
+    </Card>
   );
 }

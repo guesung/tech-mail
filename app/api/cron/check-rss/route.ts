@@ -1,9 +1,9 @@
-import { supabase } from "@/app/lib/supabase";
-import { fetchRssFeed } from "@/app/lib/rss-parser";
-import { sendEmail } from "@/app/lib/email";
-import type { Blog } from "@/app/types/blog";
-import type { Article } from "@/app/types/article";
-import type { Subscriber } from "@/app/types/subscriber";
+import { supabase } from "@/lib/supabase";
+import { fetchRssFeed } from "@/lib/rss-parser";
+import { sendEmail } from "@/lib/email";
+import type { Blog } from "@/types/blog";
+import type { Article } from "@/types/article";
+import type { Subscriber } from "@/types/subscriber";
 import { NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
@@ -36,7 +36,7 @@ export async function GET() {
   // 3. 각 블로그 RSS 크롤링 및 새 글만 추출
   for (const blog of blogs as Blog[]) {
     try {
-      const rssArticles = await fetchRssFeed(blog.rss_url);
+      const rssArticles = await fetchRssFeed(blog.rssUrl);
       // 이미 저장된 글 url 조회
       const { data: existing, error: existError } = await supabase
         .from("articles")

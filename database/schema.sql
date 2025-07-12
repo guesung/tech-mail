@@ -13,8 +13,8 @@ CREATE TABLE subscribers (
 CREATE TABLE blogs (
   id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
-  rss_url TEXT NOT NULL UNIQUE,
-  website_url TEXT,
+  rssUrl TEXT NOT NULL UNIQUE,
+  websiteUrl TEXT,
   description TEXT,
   category VARCHAR(100),
   logo_url TEXT,
