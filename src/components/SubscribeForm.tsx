@@ -6,11 +6,11 @@ import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 import { Checkbox } from "./ui/checkbox";
 import { Input } from "./ui/input";
-import blogs from "@/data/blogs";
+import blogs from "@/data/blogs.json";
 
 interface FormValues {
   email: string;
-  blogIds: string[];
+  blogIds: number[];
 }
 
 export default function SubscribeForm() {
@@ -32,7 +32,7 @@ export default function SubscribeForm() {
     const { error } = await supabase.from("subscribers").upsert(
       {
         email: data.email,
-        subscribed_blog_ids: data.blogIds,
+        subscribed_blog_ids: data.blogIds.map((id) => id.toString()),
         is_active: true,
       },
       { onConflict: "email" }
@@ -69,11 +69,11 @@ export default function SubscribeForm() {
                           field.onChange([...field.value, blog.id]);
                         } else {
                           field.onChange(
-                            field.value.filter((id: string) => id !== blog.id)
+                            field.value.filter((id) => id !== blog.id)
                           );
                         }
                       }}
-                      id={blog.id}
+                      id={blog.id.toString()}
                     />
                     <span className="text-gray-900">{blog.name}</span>
                   </label>

@@ -1,718 +1,716 @@
-{
-  "techBlogs": [
-    {
-      "id": 1,
-      "name": "네이버 D2",
-      "url": "https://d2.naver.com/",
-      "logo": "naver.png"
-    },
-    {
-      "id": 2,
-      "name": "데보션",
-      "url": "https://devocean.sk.com/",
-      "logo": "devocean.png"
-    },
-    {
-      "id": 3,
-      "name": "AWS",
-      "url": "https://aws.amazon.com/ko/blogs",
-      "logo": "aws.jpeg"
-    },
-    {
-      "id": 4,
-      "name": "한글과컴퓨터",
-      "url": "https://tech.hancom.com/",
-      "logo": "hancom.png"
-    },
-    {
-      "id": 5,
-      "name": "라인",
-      "url": "https://engineering.linecorp.com/",
-      "logo": "line.ico"
-    },
-    {
-      "id": 6,
-      "name": "토스",
-      "url": "https://toss.tech/",
-      "logo": "toss.ico"
-    },
-    {
-      "id": 7,
-      "name": "가비아",
-      "url": "https://library.gabia.com/",
-      "logo": "gabia.png"
-    },
-    {
-      "id": 8,
-      "name": "딜라이트룸",
-      "url": "https://medium.com/delightroom",
-      "logo": "delightroom.jpeg"
-    },
-    {
-      "id": 9,
-      "name": "인포그랩",
-      "url": "https://insight.infograb.net/blog",
-      "logo": "infograb.jpeg"
-    },
-    {
-      "id": 10,
-      "name": "카카오페이",
-      "url": "https://tech.kakaopay.com/",
-      "logo": "kakaopay.png"
-    },
-    {
-      "id": 11,
-      "name": "여기어때",
-      "url": "https://techblog.gccompany.co.kr/",
-      "logo": "goodchoice.png"
-    },
-    {
-      "id": 12,
-      "name": "SSG.COM",
-      "url": "https://medium.com/ssgtech",
-      "logo": "ssgcom.png"
-    },
-    {
-      "id": 13,
-      "name": "카카오",
-      "url": "https://tech.kakao.com/blog",
-      "logo": "kakao.png"
-    },
-    {
-      "id": 14,
-      "name": "무신사",
-      "url": "https://medium.com/musinsa-tech",
-      "logo": "musinsa.ico"
-    },
-    {
-      "id": 15,
-      "name": "NHN",
-      "url": "https://meetup.nhncloud.com/",
-      "logo": "nhn.jpeg"
-    },
-    {
-      "id": 16,
-      "name": "데브시스터즈",
-      "url": "https://tech.devsisters.com/",
-      "logo": "devsisters.png"
-    },
-    {
-      "id": 17,
-      "name": "당근마켓",
-      "url": "https://medium.com/daangn",
-      "logo": "daangn.ico"
-    },
-    {
-      "id": 18,
-      "name": "교보DTS",
-      "url": "https://blog.kyobodts.co.kr/",
-      "logo": "kyobo.jpeg"
-    },
-    {
-      "id": 19,
-      "name": "마켓컬리",
-      "url": "https://helloworld.kurly.com/",
-      "logo": "kurly.png"
-    },
-    {
-      "id": 20,
-      "name": "올리브영",
-      "url": "https://oliveyoung.tech/blog/",
-      "logo": "oliveyoung.png"
-    },
-    {
-      "id": 21,
-      "name": "AB180",
-      "url": "https://engineering.ab180.co/",
-      "logo": "ab180.webp"
-    },
-    {
-      "id": 22,
-      "name": "네이버 페이",
-      "url": "https://medium.com/naverfinancial",
-      "logo": "naver-pay.jpeg"
-    },
-    {
-      "id": 23,
-      "name": "SK플래닛",
-      "url": "https://techtopic.skplanet.com/",
-      "logo": "sk-planet.jpeg"
-    },
-    {
-      "id": 24,
-      "name": "우아한 형제들",
-      "url": "https://techblog.woowahan.com/",
-      "logo": "woowahan.png"
-    },
-    {
-      "id": 25,
-      "name": "마이리얼트립",
-      "url": "https://medium.com/myrealtrip-product/",
-      "logo": "myrealtrip.ico"
-    },
-    {
-      "id": 26,
-      "name": "뤼이드",
-      "url": "https://medium.com/riiid-teamblog-kr",
-      "logo": "riiid.png"
-    },
-    {
-      "id": 27,
-      "name": "크리에이트립",
-      "url": "https://medium.com/creatrip",
-      "logo": "creatrip.png"
-    },
-    {
-      "id": 28,
-      "name": "하이퍼커넥트",
-      "url": "https://hyperconnect.github.io/",
-      "logo": "hyperconnect.png"
-    },
-    {
-      "id": 29,
-      "name": "쏘카",
-      "url": "https://tech.socarcorp.kr/",
-      "logo": "socar.png"
-    },
-    {
-      "id": 30,
-      "name": "마키나락스",
-      "url": "https://www.makinarocks.ai/category/tech",
-      "logo": "makinarocks.jpeg"
-    },
-    {
-      "id": 31,
-      "name": "농심NDS",
-      "url": "https://tech.cloud.nongshim.co.kr",
-      "logo": "nongshim-nds.png"
-    },
-    {
-      "id": 32,
-      "name": "QueryPie",
-      "url": "https://www.querypie.com/ko/resources",
-      "logo": "query-pie.png"
-    },
-    {
-      "id": 33,
-      "name": "29cm",
-      "url": "https://medium.com/29cm",
-      "logo": "29cm.png"
-    },
-    {
-      "id": 34,
-      "name": "베스핀글로벌",
-      "url": "https://blog.bespinglobal.com/post/category",
-      "logo": "bespin-global.png"
-    },
-    {
-      "id": 35,
-      "name": "11번가",
-      "url": "https://11st-tech.github.io/",
-      "logo": "11st.png"
-    },
-    {
-      "id": 36,
-      "name": "크림",
-      "url": "https://medium.com/kream-%EA",
-      "logo": "kream.png"
-    },
-    {
-      "id": 37,
-      "name": "watcha",
-      "url": "https://medium.com/watcha",
-      "logo": "watcha.ico"
-    },
-    {
-      "id": 38,
-      "name": "캐치테이블",
-      "url": "https://medium.com/catchtable",
-      "logo": "catchtable.png"
-    },
-    {
-      "id": 39,
-      "name": "포스타입",
-      "url": "https://www.postype.com/@team",
-      "logo": "postype.png"
-    },
-    {
-      "id": 40,
-      "name": "비브로스",
-      "url": "https://boostbrothers.github.io/",
-      "logo": "bbros.png"
-    },
-    {
-      "id": 41,
-      "name": "카카오모빌리티",
-      "url": "https://developers.kakaomobility.com/techblogs",
-      "logo": "kakaomobility.ico"
-    },
-    {
-      "id": 42,
-      "name": "매스프레소",
-      "url": "https://blog.mathpresso.com/",
-      "logo": "mathpresso.jpeg"
-    },
-    {
-      "id": 43,
-      "name": "카카오뱅크",
-      "url": "https://tech.kakaobank.com/",
-      "logo": "kakaobank.png"
-    },
-    {
-      "id": 44,
-      "name": "티맵모빌리티",
-      "url": "https://brunch.co.kr/@tmapmobility",
-      "logo": "tmap.jpeg"
-    },
-    {
-      "id": 45,
-      "name": "펫프렌즈",
-      "url": "https://techblog.pet-friends.co.kr",
-      "logo": "petfriends.jpeg"
-    },
-    {
-      "id": 46,
-      "name": "현대자동차그룹",
-      "url": "https://developers.hyundaimotorgroup.com/blog",
-      "logo": "hyundai.png"
-    },
-    {
-      "id": 47,
-      "name": "토니모리",
-      "url": "https://tonymoly-tech.medium.com/",
-      "logo": "tonymoly.png"
-    },
-    {
-      "id": 48,
-      "name": "spoqa",
-      "url": "https://spoqa.github.io/",
-      "logo": "spoqa.png"
-    },
-    {
-      "id": 49,
-      "name": "리멤버",
-      "url": "https://tech.remember.co.kr/",
-      "logo": "remember.png"
-    },
-    {
-      "id": 50,
-      "name": "컴투스",
-      "url": "https://on.com2us.com/tag/%",
-      "logo": "com2us.jpeg"
-    },
-    {
-      "id": 51,
-      "name": "카카오스타일",
-      "url": "https://devblog.croquis.com/ko",
-      "logo": "kakao-style.jpeg"
-    },
-    {
-      "id": 52,
-      "name": "플라네타리움",
-      "url": "https://snack.planetarium.dev/kor/",
-      "logo": "planetarium.webp"
-    },
-    {
-      "id": 53,
-      "name": "RIDI",
-      "url": "https://ridicorp.com/story-category/tech",
-      "logo": "ridi.png"
-    },
-    {
-      "id": 54,
-      "name": "글루시스",
-      "url": "https://tech.gluesys.com/",
-      "logo": "gluesys.jpeg"
-    },
-    {
-      "id": 55,
-      "name": "VCNC",
-      "url": "http://engineering.vcnc.co.kr/",
-      "logo": "vcnc.png"
-    },
-    {
-      "id": 56,
-      "name": "뱅크샐러드",
-      "url": "https://blog.banksalad.com/",
-      "logo": "banksalad.ico"
-    },
-    {
-      "id": 57,
-      "name": "모두싸인",
-      "url": "https://team.modusign.co.kr/tagged",
-      "logo": "modusign.png"
-    },
-    {
-      "id": 58,
-      "name": "롯데ON",
-      "url": "https://techblog.lotteon.com/",
-      "logo": "lotte-on.jpeg"
-    },
-    {
-      "id": 59,
-      "name": "네이버 DnA",
-      "url": "https://medium.com/naver-dna-tech",
-      "logo": "naver.png"
-    },
-    {
-      "id": 60,
-      "name": "스마일게이트AI",
-      "url": "https://smilegate.ai/recent/",
-      "logo": "smilegate-ai.png"
-    },
-    {
-      "id": 61,
-      "name": "카테노이드",
-      "url": "https://techblog.catenoid.net/",
-      "logo": "catenoid.jpeg"
-    },
-    {
-      "id": 62,
-      "name": "지마켓",
-      "url": "https://ebay-korea.tistory.com/",
-      "logo": "gmarket.ico"
-    },
-    {
-      "id": 63,
-      "name": "매드업",
-      "url": "https://tech.madup.com/",
-      "logo": "madup.png"
-    },
-    {
-      "id": 64,
-      "name": "직행",
-      "url": "https://zighang.inblog.ai/",
-      "logo": "zighang.jpeg"
-    },
-    {
-      "id": 65,
-      "name": "what's min",
-      "url": "https://whatsmin.hashnode.dev/",
-      "logo": "default.png"
-    },
-    {
-      "id": 66,
-      "name": "원티드",
-      "url": "https://social.wanted.co.kr/community",
-      "logo": "wanted.jpeg"
-    },
-    {
-      "id": 67,
-      "name": "테이블링",
-      "url": "https://medium.com/tabling-tech",
-      "logo": "tabling.webp"
-    },
-    {
-      "id": 68,
-      "name": "다나와",
-      "url": "https://danawalab.github.io/",
-      "logo": "danawa.ico"
-    },
-    {
-      "id": 69,
-      "name": "카카오엔터테인먼트FE",
-      "url": "https://fe-developers.kakaoent.com/",
-      "logo": "kakao-entertainment.png"
-    },
-    {
-      "id": 70,
-      "name": "쭈니쭈니",
-      "url": "https://developer-parkssi.github.io/",
-      "logo": "default.png"
-    },
-    {
-      "id": 71,
-      "name": "TechKi Blog",
-      "url": "https://air77.hashnode.dev/",
-      "logo": "default.png"
-    },
-    {
-      "id": 72,
-      "name": "네이버 플레이스",
-      "url": "https://medium.com/naver-place-dev",
-      "logo": "naver-place.png"
-    },
-    {
-      "id": 73,
-      "name": "CJ온스타일",
-      "url": "https://medium.com/cj-onstyle",
-      "logo": "cj-onstyle.jpeg"
-    },
-    {
-      "id": 74,
-      "name": "클라우드메이트",
-      "url": "https://tech.cloudmt.co.kr/",
-      "logo": "cloudmt.png"
-    },
-    {
-      "id": 75,
-      "name": "쿠팡",
-      "url": "https://medium.com/coupang-engineering/kr",
-      "logo": "coupang.png"
-    },
-    {
-      "id": 76,
-      "name": "스퀘어랩",
-      "url": "https://squarelab.co/blog",
-      "logo": "squarelab.jpg"
-    },
-    {
-      "id": 77,
-      "name": "부스터스",
-      "url": "https://tech.boosters-labs.com/",
-      "logo": "boosters.png"
-    },
-    {
-      "id": 78,
-      "name": "브랜디",
-      "url": "http://labs.brandi.co.kr/",
-      "logo": "brandi.png"
-    },
-    {
-      "id": 79,
-      "name": "요기요",
-      "url": "https://techblog.yogiyo.co.kr/",
-      "logo": "yogiyo.svg"
-    },
-    {
-      "id": 80,
-      "name": "8퍼센트",
-      "url": "https://8percent.github.io/",
-      "logo": "8percent.jpeg"
-    },
-    {
-      "id": 81,
-      "name": "메가존클라우드",
-      "url": "https://medium.com/ctc-mzc",
-      "logo": "mgazone-cloud.png"
-    },
-    {
-      "id": 82,
-      "name": "넷마블",
-      "url": "https://netmarble.engineering/",
-      "logo": "netmarble.jpg"
-    },
-    {
-      "id": 83,
-      "name": "사람인",
-      "url": "https://saramin.github.io/",
-      "logo": "saramin.jpeg"
-    },
-    {
-      "id": 84,
-      "name": "버즈빌",
-      "url": "https://tech.buzzvil.com/",
-      "logo": "buzzvil.png"
-    },
-    {
-      "id": 85,
-      "name": "카카오헤어샵",
-      "url": "https://brunch.co.kr/@purpledev",
-      "logo": "kakao-hairshop.jpeg"
-    },
-    {
-      "id": 86,
-      "name": "빅웨이브에이아이",
-      "url": "https://bigwaveai.tistory.com/",
-      "logo": "bigwave.png"
-    },
-    {
-      "id": 87,
-      "name": "씨앤텍시스템즈",
-      "url": "https://cntechsystems.tistory.com/",
-      "logo": "cntechsystems.jpeg"
-    },
-    {
-      "id": 88,
-      "name": "엘리시아",
-      "url": "https://medium.com/elysia-techblog",
-      "logo": "elysia.png"
-    },
-    {
-      "id": 89,
-      "name": "아이디어스",
-      "url": "https://medium.com/idus-tech",
-      "logo": "idus.png"
-    },
-    {
-      "id": 90,
-      "name": "IMQA",
-      "url": "https://blog.imqa.io/tag/tech",
-      "logo": "imqa.png"
-    },
-    {
-      "id": 91,
-      "name": "직방",
-      "url": "https://medium.com/zigbang",
-      "logo": "zigbang.ico"
-    },
-    {
-      "id": 92,
-      "name": "덴티움",
-      "url": "https://www.dentium.tech/",
-      "logo": "dentium.png"
-    },
-    {
-      "id": 93,
-      "name": "핀다",
-      "url": "https://medium.com/finda-tech",
-      "logo": "finda.png"
-    },
-    {
-      "id": 94,
-      "name": "더핑크퐁컴퍼니",
-      "url": "https://medium.com/pinkfong",
-      "logo": "pinkfong.png"
-    },
-    {
-      "id": 95,
-      "name": "트렌비",
-      "url": "https://tech.trenbe.com/",
-      "logo": "trenbe.jpeg"
-    },
-    {
-      "id": 96,
-      "name": "카카오엔터프라이즈",
-      "url": "https://tech.kakaoenterprise.com/",
-      "logo": "kakao-enterprise.jpeg"
-    },
-    {
-      "id": 97,
-      "name": "클래스101",
-      "url": "https://medium.com/class101",
-      "logo": "class101.webp"
-    },
-    {
-      "id": 98,
-      "name": "너드팩토리",
-      "url": "https://blog.nerdfactory.ai/",
-      "logo": "nerdfactory.png"
-    },
-    {
-      "id": 99,
-      "name": "핏펫",
-      "url": "https://fitpet.medium.com/",
-      "logo": "fitfat.png"
-    },
-    {
-      "id": 100,
-      "name": "딜리셔스",
-      "url": "https://dealicious-inc.github.io/",
-      "logo": "dealiciou.svg"
-    },
-    {
-      "id": 101,
-      "name": "SK C&C",
-      "url": "https://engineering-skcc.github.io/",
-      "logo": "sk-c&amp"
-    },
-    {
-      "id": 102,
-      "name": "로플랫",
-      "url": "https://medium.com/loplat/tagged/tech",
-      "logo": "loplat.png"
-    },
-    {
-      "id": 103,
-      "name": "야놀자클라우드",
-      "url": "https://medium.com/yanoljacloud-tech",
-      "logo": "yanolja-cloud.jpeg"
-    },
-    {
-      "id": 104,
-      "name": "티몬",
-      "url": "https://blog.naver.com/tmondev",
-      "logo": "tmon.jpeg"
-    },
-    {
-      "id": 105,
-      "name": "AITRICS",
-      "url": "https://medium.com/aitrics",
-      "logo": "aitrics.png"
-    },
-    {
-      "id": 106,
-      "name": "루닛",
-      "url": "https://medium.com/lunit/tagged/software",
-      "logo": "lunit.png"
-    },
-    {
-      "id": 107,
-      "name": "그린데이터",
-      "url": "https://medium.com/greendatakr",
-      "logo": "greendata.png"
-    },
-    {
-      "id": 108,
-      "name": "NC소프트 DANBI",
-      "url": "https://danbi-ncsoft.github.io/",
-      "logo": "ncsoft-danbi.png"
-    },
-    {
-      "id": 109,
-      "name": "레모네이드",
-      "url": "https://lemonade-engineering.medium.com/",
-      "logo": "lemondae.jpeg"
-    },
-    {
-      "id": 110,
-      "name": "꿈많은청년들",
-      "url": "https://medium.com/dream-youngs",
-      "logo": "dream-youngs.png"
-    },
-    {
-      "id": 111,
-      "name": "뷰노",
-      "url": "https://medium.com/vuno-sw-dev",
-      "logo": "vuno.png"
-    },
-    {
-      "id": 112,
-      "name": "똑똑한개발자",
-      "url": "https://tech.toktokhan.dev/",
-      "logo": "toktokhan.png"
-    },
-    {
-      "id": 113,
-      "name": "엔라이즈",
-      "url": "https://nrise.github.io/",
-      "logo": "nrise.png"
-    },
-    {
-      "id": 114,
-      "name": "스타일쉐어",
-      "url": "https://medium.com/styleshare",
-      "logo": "styleshare.jpeg"
-    },
-    {
-      "id": 115,
-      "name": "크몽",
-      "url": "https://medium.com/kmong",
-      "logo": "kmong.png"
-    },
-    {
-      "id": 116,
-      "name": "코인원",
-      "url": "https://medium.com/coinone",
-      "logo": "coinone.jpeg"
-    },
-    {
-      "id": 117,
-      "name": "휴몬랩",
-      "url": "https://devlog-h.tistory.com/",
-      "logo": "humanlab.webp"
-    },
-    {
-      "id": 118,
-      "name": "모히톡",
-      "url": "https://medium.com/platfarm/technology/home",
-      "logo": "mojitok.png"
-    },
-    {
-      "id": 119,
-      "name": "스캐터랩 핑퐁",
-      "url": "https://blog.scatterlab.co.kr/",
-      "logo": "scatterlab.jpeg"
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "name": "네이버 D2",
+    "url": "https://d2.naver.com/",
+    "logo": "naver.png"
+  },
+  {
+    "id": 2,
+    "name": "데보션",
+    "url": "https://devocean.sk.com/",
+    "logo": "devocean.png"
+  },
+  {
+    "id": 3,
+    "name": "AWS",
+    "url": "https://aws.amazon.com/ko/blogs",
+    "logo": "aws.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "한글과컴퓨터",
+    "url": "https://tech.hancom.com/",
+    "logo": "hancom.png"
+  },
+  {
+    "id": 5,
+    "name": "라인",
+    "url": "https://engineering.linecorp.com/",
+    "logo": "line.ico"
+  },
+  {
+    "id": 6,
+    "name": "토스",
+    "url": "https://toss.tech/",
+    "logo": "toss.ico"
+  },
+  {
+    "id": 7,
+    "name": "가비아",
+    "url": "https://library.gabia.com/",
+    "logo": "gabia.png"
+  },
+  {
+    "id": 8,
+    "name": "딜라이트룸",
+    "url": "https://medium.com/delightroom",
+    "logo": "delightroom.jpeg"
+  },
+  {
+    "id": 9,
+    "name": "인포그랩",
+    "url": "https://insight.infograb.net/blog",
+    "logo": "infograb.jpeg"
+  },
+  {
+    "id": 10,
+    "name": "카카오페이",
+    "url": "https://tech.kakaopay.com/",
+    "logo": "kakaopay.png"
+  },
+  {
+    "id": 11,
+    "name": "여기어때",
+    "url": "https://techblog.gccompany.co.kr/",
+    "logo": "goodchoice.png"
+  },
+  {
+    "id": 12,
+    "name": "SSG.COM",
+    "url": "https://medium.com/ssgtech",
+    "logo": "ssgcom.png"
+  },
+  {
+    "id": 13,
+    "name": "카카오",
+    "url": "https://tech.kakao.com/blog",
+    "logo": "kakao.png"
+  },
+  {
+    "id": 14,
+    "name": "무신사",
+    "url": "https://medium.com/musinsa-tech",
+    "logo": "musinsa.ico"
+  },
+  {
+    "id": 15,
+    "name": "NHN",
+    "url": "https://meetup.nhncloud.com/",
+    "logo": "nhn.jpeg"
+  },
+  {
+    "id": 16,
+    "name": "데브시스터즈",
+    "url": "https://tech.devsisters.com/",
+    "logo": "devsisters.png"
+  },
+  {
+    "id": 17,
+    "name": "당근마켓",
+    "url": "https://medium.com/daangn",
+    "logo": "daangn.ico"
+  },
+  {
+    "id": 18,
+    "name": "교보DTS",
+    "url": "https://blog.kyobodts.co.kr/",
+    "logo": "kyobo.jpeg"
+  },
+  {
+    "id": 19,
+    "name": "마켓컬리",
+    "url": "https://helloworld.kurly.com/",
+    "logo": "kurly.png"
+  },
+  {
+    "id": 20,
+    "name": "올리브영",
+    "url": "https://oliveyoung.tech/blog/",
+    "logo": "oliveyoung.png"
+  },
+  {
+    "id": 21,
+    "name": "AB180",
+    "url": "https://engineering.ab180.co/",
+    "logo": "ab180.webp"
+  },
+  {
+    "id": 22,
+    "name": "네이버 페이",
+    "url": "https://medium.com/naverfinancial",
+    "logo": "naver-pay.jpeg"
+  },
+  {
+    "id": 23,
+    "name": "SK플래닛",
+    "url": "https://techtopic.skplanet.com/",
+    "logo": "sk-planet.jpeg"
+  },
+  {
+    "id": 24,
+    "name": "우아한 형제들",
+    "url": "https://techblog.woowahan.com/",
+    "logo": "woowahan.png"
+  },
+  {
+    "id": 25,
+    "name": "마이리얼트립",
+    "url": "https://medium.com/myrealtrip-product/",
+    "logo": "myrealtrip.ico"
+  },
+  {
+    "id": 26,
+    "name": "뤼이드",
+    "url": "https://medium.com/riiid-teamblog-kr",
+    "logo": "riiid.png"
+  },
+  {
+    "id": 27,
+    "name": "크리에이트립",
+    "url": "https://medium.com/creatrip",
+    "logo": "creatrip.png"
+  },
+  {
+    "id": 28,
+    "name": "하이퍼커넥트",
+    "url": "https://hyperconnect.github.io/",
+    "logo": "hyperconnect.png"
+  },
+  {
+    "id": 29,
+    "name": "쏘카",
+    "url": "https://tech.socarcorp.kr/",
+    "logo": "socar.png"
+  },
+  {
+    "id": 30,
+    "name": "마키나락스",
+    "url": "https://www.makinarocks.ai/category/tech",
+    "logo": "makinarocks.jpeg"
+  },
+  {
+    "id": 31,
+    "name": "농심NDS",
+    "url": "https://tech.cloud.nongshim.co.kr",
+    "logo": "nongshim-nds.png"
+  },
+  {
+    "id": 32,
+    "name": "QueryPie",
+    "url": "https://www.querypie.com/ko/resources",
+    "logo": "query-pie.png"
+  },
+  {
+    "id": 33,
+    "name": "29cm",
+    "url": "https://medium.com/29cm",
+    "logo": "29cm.png"
+  },
+  {
+    "id": 34,
+    "name": "베스핀글로벌",
+    "url": "https://blog.bespinglobal.com/post/category",
+    "logo": "bespin-global.png"
+  },
+  {
+    "id": 35,
+    "name": "11번가",
+    "url": "https://11st-tech.github.io/",
+    "logo": "11st.png"
+  },
+  {
+    "id": 36,
+    "name": "크림",
+    "url": "https://medium.com/kream-%EA",
+    "logo": "kream.png"
+  },
+  {
+    "id": 37,
+    "name": "watcha",
+    "url": "https://medium.com/watcha",
+    "logo": "watcha.ico"
+  },
+  {
+    "id": 38,
+    "name": "캐치테이블",
+    "url": "https://medium.com/catchtable",
+    "logo": "catchtable.png"
+  },
+  {
+    "id": 39,
+    "name": "포스타입",
+    "url": "https://www.postype.com/@team",
+    "logo": "postype.png"
+  },
+  {
+    "id": 40,
+    "name": "비브로스",
+    "url": "https://boostbrothers.github.io/",
+    "logo": "bbros.png"
+  },
+  {
+    "id": 41,
+    "name": "카카오모빌리티",
+    "url": "https://developers.kakaomobility.com/techblogs",
+    "logo": "kakaomobility.ico"
+  },
+  {
+    "id": 42,
+    "name": "매스프레소",
+    "url": "https://blog.mathpresso.com/",
+    "logo": "mathpresso.jpeg"
+  },
+  {
+    "id": 43,
+    "name": "카카오뱅크",
+    "url": "https://tech.kakaobank.com/",
+    "logo": "kakaobank.png"
+  },
+  {
+    "id": 44,
+    "name": "티맵모빌리티",
+    "url": "https://brunch.co.kr/@tmapmobility",
+    "logo": "tmap.jpeg"
+  },
+  {
+    "id": 45,
+    "name": "펫프렌즈",
+    "url": "https://techblog.pet-friends.co.kr",
+    "logo": "petfriends.jpeg"
+  },
+  {
+    "id": 46,
+    "name": "현대자동차그룹",
+    "url": "https://developers.hyundaimotorgroup.com/blog",
+    "logo": "hyundai.png"
+  },
+  {
+    "id": 47,
+    "name": "토니모리",
+    "url": "https://tonymoly-tech.medium.com/",
+    "logo": "tonymoly.png"
+  },
+  {
+    "id": 48,
+    "name": "spoqa",
+    "url": "https://spoqa.github.io/",
+    "logo": "spoqa.png"
+  },
+  {
+    "id": 49,
+    "name": "리멤버",
+    "url": "https://tech.remember.co.kr/",
+    "logo": "remember.png"
+  },
+  {
+    "id": 50,
+    "name": "컴투스",
+    "url": "https://on.com2us.com/tag/%",
+    "logo": "com2us.jpeg"
+  },
+  {
+    "id": 51,
+    "name": "카카오스타일",
+    "url": "https://devblog.croquis.com/ko",
+    "logo": "kakao-style.jpeg"
+  },
+  {
+    "id": 52,
+    "name": "플라네타리움",
+    "url": "https://snack.planetarium.dev/kor/",
+    "logo": "planetarium.webp"
+  },
+  {
+    "id": 53,
+    "name": "RIDI",
+    "url": "https://ridicorp.com/story-category/tech",
+    "logo": "ridi.png"
+  },
+  {
+    "id": 54,
+    "name": "글루시스",
+    "url": "https://tech.gluesys.com/",
+    "logo": "gluesys.jpeg"
+  },
+  {
+    "id": 55,
+    "name": "VCNC",
+    "url": "http://engineering.vcnc.co.kr/",
+    "logo": "vcnc.png"
+  },
+  {
+    "id": 56,
+    "name": "뱅크샐러드",
+    "url": "https://blog.banksalad.com/",
+    "logo": "banksalad.ico"
+  },
+  {
+    "id": 57,
+    "name": "모두싸인",
+    "url": "https://team.modusign.co.kr/tagged",
+    "logo": "modusign.png"
+  },
+  {
+    "id": 58,
+    "name": "롯데ON",
+    "url": "https://techblog.lotteon.com/",
+    "logo": "lotte-on.jpeg"
+  },
+  {
+    "id": 59,
+    "name": "네이버 DnA",
+    "url": "https://medium.com/naver-dna-tech",
+    "logo": "naver.png"
+  },
+  {
+    "id": 60,
+    "name": "스마일게이트AI",
+    "url": "https://smilegate.ai/recent/",
+    "logo": "smilegate-ai.png"
+  },
+  {
+    "id": 61,
+    "name": "카테노이드",
+    "url": "https://techblog.catenoid.net/",
+    "logo": "catenoid.jpeg"
+  },
+  {
+    "id": 62,
+    "name": "지마켓",
+    "url": "https://ebay-korea.tistory.com/",
+    "logo": "gmarket.ico"
+  },
+  {
+    "id": 63,
+    "name": "매드업",
+    "url": "https://tech.madup.com/",
+    "logo": "madup.png"
+  },
+  {
+    "id": 64,
+    "name": "직행",
+    "url": "https://zighang.inblog.ai/",
+    "logo": "zighang.jpeg"
+  },
+  {
+    "id": 65,
+    "name": "what's min",
+    "url": "https://whatsmin.hashnode.dev/",
+    "logo": "default.png"
+  },
+  {
+    "id": 66,
+    "name": "원티드",
+    "url": "https://social.wanted.co.kr/community",
+    "logo": "wanted.jpeg"
+  },
+  {
+    "id": 67,
+    "name": "테이블링",
+    "url": "https://medium.com/tabling-tech",
+    "logo": "tabling.webp"
+  },
+  {
+    "id": 68,
+    "name": "다나와",
+    "url": "https://danawalab.github.io/",
+    "logo": "danawa.ico"
+  },
+  {
+    "id": 69,
+    "name": "카카오엔터테인먼트FE",
+    "url": "https://fe-developers.kakaoent.com/",
+    "logo": "kakao-entertainment.png"
+  },
+  {
+    "id": 70,
+    "name": "쭈니쭈니",
+    "url": "https://developer-parkssi.github.io/",
+    "logo": "default.png"
+  },
+  {
+    "id": 71,
+    "name": "TechKi Blog",
+    "url": "https://air77.hashnode.dev/",
+    "logo": "default.png"
+  },
+  {
+    "id": 72,
+    "name": "네이버 플레이스",
+    "url": "https://medium.com/naver-place-dev",
+    "logo": "naver-place.png"
+  },
+  {
+    "id": 73,
+    "name": "CJ온스타일",
+    "url": "https://medium.com/cj-onstyle",
+    "logo": "cj-onstyle.jpeg"
+  },
+  {
+    "id": 74,
+    "name": "클라우드메이트",
+    "url": "https://tech.cloudmt.co.kr/",
+    "logo": "cloudmt.png"
+  },
+  {
+    "id": 75,
+    "name": "쿠팡",
+    "url": "https://medium.com/coupang-engineering/kr",
+    "logo": "coupang.png"
+  },
+  {
+    "id": 76,
+    "name": "스퀘어랩",
+    "url": "https://squarelab.co/blog",
+    "logo": "squarelab.jpg"
+  },
+  {
+    "id": 77,
+    "name": "부스터스",
+    "url": "https://tech.boosters-labs.com/",
+    "logo": "boosters.png"
+  },
+  {
+    "id": 78,
+    "name": "브랜디",
+    "url": "http://labs.brandi.co.kr/",
+    "logo": "brandi.png"
+  },
+  {
+    "id": 79,
+    "name": "요기요",
+    "url": "https://techblog.yogiyo.co.kr/",
+    "logo": "yogiyo.svg"
+  },
+  {
+    "id": 80,
+    "name": "8퍼센트",
+    "url": "https://8percent.github.io/",
+    "logo": "8percent.jpeg"
+  },
+  {
+    "id": 81,
+    "name": "메가존클라우드",
+    "url": "https://medium.com/ctc-mzc",
+    "logo": "mgazone-cloud.png"
+  },
+  {
+    "id": 82,
+    "name": "넷마블",
+    "url": "https://netmarble.engineering/",
+    "logo": "netmarble.jpg"
+  },
+  {
+    "id": 83,
+    "name": "사람인",
+    "url": "https://saramin.github.io/",
+    "logo": "saramin.jpeg"
+  },
+  {
+    "id": 84,
+    "name": "버즈빌",
+    "url": "https://tech.buzzvil.com/",
+    "logo": "buzzvil.png"
+  },
+  {
+    "id": 85,
+    "name": "카카오헤어샵",
+    "url": "https://brunch.co.kr/@purpledev",
+    "logo": "kakao-hairshop.jpeg"
+  },
+  {
+    "id": 86,
+    "name": "빅웨이브에이아이",
+    "url": "https://bigwaveai.tistory.com/",
+    "logo": "bigwave.png"
+  },
+  {
+    "id": 87,
+    "name": "씨앤텍시스템즈",
+    "url": "https://cntechsystems.tistory.com/",
+    "logo": "cntechsystems.jpeg"
+  },
+  {
+    "id": 88,
+    "name": "엘리시아",
+    "url": "https://medium.com/elysia-techblog",
+    "logo": "elysia.png"
+  },
+  {
+    "id": 89,
+    "name": "아이디어스",
+    "url": "https://medium.com/idus-tech",
+    "logo": "idus.png"
+  },
+  {
+    "id": 90,
+    "name": "IMQA",
+    "url": "https://blog.imqa.io/tag/tech",
+    "logo": "imqa.png"
+  },
+  {
+    "id": 91,
+    "name": "직방",
+    "url": "https://medium.com/zigbang",
+    "logo": "zigbang.ico"
+  },
+  {
+    "id": 92,
+    "name": "덴티움",
+    "url": "https://www.dentium.tech/",
+    "logo": "dentium.png"
+  },
+  {
+    "id": 93,
+    "name": "핀다",
+    "url": "https://medium.com/finda-tech",
+    "logo": "finda.png"
+  },
+  {
+    "id": 94,
+    "name": "더핑크퐁컴퍼니",
+    "url": "https://medium.com/pinkfong",
+    "logo": "pinkfong.png"
+  },
+  {
+    "id": 95,
+    "name": "트렌비",
+    "url": "https://tech.trenbe.com/",
+    "logo": "trenbe.jpeg"
+  },
+  {
+    "id": 96,
+    "name": "카카오엔터프라이즈",
+    "url": "https://tech.kakaoenterprise.com/",
+    "logo": "kakao-enterprise.jpeg"
+  },
+  {
+    "id": 97,
+    "name": "클래스101",
+    "url": "https://medium.com/class101",
+    "logo": "class101.webp"
+  },
+  {
+    "id": 98,
+    "name": "너드팩토리",
+    "url": "https://blog.nerdfactory.ai/",
+    "logo": "nerdfactory.png"
+  },
+  {
+    "id": 99,
+    "name": "핏펫",
+    "url": "https://fitpet.medium.com/",
+    "logo": "fitfat.png"
+  },
+  {
+    "id": 100,
+    "name": "딜리셔스",
+    "url": "https://dealicious-inc.github.io/",
+    "logo": "dealiciou.svg"
+  },
+  {
+    "id": 101,
+    "name": "SK C&C",
+    "url": "https://engineering-skcc.github.io/",
+    "logo": "sk-c&amp"
+  },
+  {
+    "id": 102,
+    "name": "로플랫",
+    "url": "https://medium.com/loplat/tagged/tech",
+    "logo": "loplat.png"
+  },
+  {
+    "id": 103,
+    "name": "야놀자클라우드",
+    "url": "https://medium.com/yanoljacloud-tech",
+    "logo": "yanolja-cloud.jpeg"
+  },
+  {
+    "id": 104,
+    "name": "티몬",
+    "url": "https://blog.naver.com/tmondev",
+    "logo": "tmon.jpeg"
+  },
+  {
+    "id": 105,
+    "name": "AITRICS",
+    "url": "https://medium.com/aitrics",
+    "logo": "aitrics.png"
+  },
+  {
+    "id": 106,
+    "name": "루닛",
+    "url": "https://medium.com/lunit/tagged/software",
+    "logo": "lunit.png"
+  },
+  {
+    "id": 107,
+    "name": "그린데이터",
+    "url": "https://medium.com/greendatakr",
+    "logo": "greendata.png"
+  },
+  {
+    "id": 108,
+    "name": "NC소프트 DANBI",
+    "url": "https://danbi-ncsoft.github.io/",
+    "logo": "ncsoft-danbi.png"
+  },
+  {
+    "id": 109,
+    "name": "레모네이드",
+    "url": "https://lemonade-engineering.medium.com/",
+    "logo": "lemondae.jpeg"
+  },
+  {
+    "id": 110,
+    "name": "꿈많은청년들",
+    "url": "https://medium.com/dream-youngs",
+    "logo": "dream-youngs.png"
+  },
+  {
+    "id": 111,
+    "name": "뷰노",
+    "url": "https://medium.com/vuno-sw-dev",
+    "logo": "vuno.png"
+  },
+  {
+    "id": 112,
+    "name": "똑똑한개발자",
+    "url": "https://tech.toktokhan.dev/",
+    "logo": "toktokhan.png"
+  },
+  {
+    "id": 113,
+    "name": "엔라이즈",
+    "url": "https://nrise.github.io/",
+    "logo": "nrise.png"
+  },
+  {
+    "id": 114,
+    "name": "스타일쉐어",
+    "url": "https://medium.com/styleshare",
+    "logo": "styleshare.jpeg"
+  },
+  {
+    "id": 115,
+    "name": "크몽",
+    "url": "https://medium.com/kmong",
+    "logo": "kmong.png"
+  },
+  {
+    "id": 116,
+    "name": "코인원",
+    "url": "https://medium.com/coinone",
+    "logo": "coinone.jpeg"
+  },
+  {
+    "id": 117,
+    "name": "휴몬랩",
+    "url": "https://devlog-h.tistory.com/",
+    "logo": "humanlab.webp"
+  },
+  {
+    "id": 118,
+    "name": "모히톡",
+    "url": "https://medium.com/platfarm/technology/home",
+    "logo": "mojitok.png"
+  },
+  {
+    "id": 119,
+    "name": "스캐터랩 핑퐁",
+    "url": "https://blog.scatterlab.co.kr/",
+    "logo": "scatterlab.jpeg"
+  }
+]
