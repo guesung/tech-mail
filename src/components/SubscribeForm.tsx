@@ -14,6 +14,37 @@ interface FormValues {
   blogIds: number[];
 }
 
+interface BlogCheckboxItemProps {
+  blog: (typeof blogs)[number];
+  checked: boolean;
+  onCheckedChange: (checked: boolean) => void;
+}
+
+function BlogCheckboxItem({
+  blog,
+  checked,
+  onCheckedChange,
+}: BlogCheckboxItemProps) {
+  return (
+    <label className="flex items-center gap-2">
+      <Checkbox
+        checked={checked}
+        onCheckedChange={onCheckedChange}
+        id={blog.id.toString()}
+      />
+      <Image
+        src={`/blogs/${blog.logo}`}
+        alt={blog.name}
+        width={24}
+        height={24}
+        className="rounded object-contain"
+        style={{ minWidth: 24, minHeight: 24 }}
+      />
+      <span className="text-gray-900">{blog.name}</span>
+    </label>
+  );
+}
+
 export default function SubscribeForm() {
   const {
     register,
@@ -24,15 +55,7 @@ export default function SubscribeForm() {
   } = useForm<FormValues>({
     defaultValues: {
       email: "",
-      blogIds: [
-        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-        21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38,
-        39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
-        57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
-        75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92,
-        93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108,
-        109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119,
-      ],
+      blogIds: [],
     },
   });
   const [result, setResult] = React.useState<string | null>(null);
@@ -72,30 +95,20 @@ export default function SubscribeForm() {
             render={({ field }) => (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {blogs.map((blog) => (
-                  <label key={blog.id} className="flex items-center gap-2">
-                    <Checkbox
-                      checked={field.value.includes(blog.id)}
-                      onCheckedChange={(checked) => {
-                        if (checked) {
-                          field.onChange([...field.value, blog.id]);
-                        } else {
-                          field.onChange(
-                            field.value.filter((id) => id !== blog.id)
-                          );
-                        }
-                      }}
-                      id={blog.id.toString()}
-                    />
-                    <Image
-                      src={`/blogs/${blog.logo}`}
-                      alt={blog.name}
-                      width={24}
-                      height={24}
-                      className="rounded object-contain"
-                      style={{ minWidth: 24, minHeight: 24 }}
-                    />
-                    <span className="text-gray-900">{blog.name}</span>
-                  </label>
+                  <BlogCheckboxItem
+                    key={blog.id}
+                    blog={blog}
+                    checked={field.value.includes(blog.id)}
+                    onCheckedChange={(checked) => {
+                      if (checked) {
+                        field.onChange([...field.value, blog.id]);
+                      } else {
+                        field.onChange(
+                          field.value.filter((id) => id !== blog.id)
+                        );
+                      }
+                    }}
+                  />
                 ))}
               </div>
             )}
