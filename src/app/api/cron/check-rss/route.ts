@@ -1,6 +1,6 @@
 import { getSubscribers } from "@/apis/supabase";
 import EmailTemplate from "@/components/EmailTemplate";
-import blogs from "@/data/blogs-with-images.json";
+import blogs from "@/data/blogs";
 import { sendEmail } from "@/lib/email";
 import { fetchRssFeed } from "@/lib/rss-parser";
 import { Blog } from "@/types";

@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 import { Checkbox } from "./ui/checkbox";
 import { Input } from "./ui/input";
-import blogs from "@/data/blogs-with-images.json";
+import blogs from "@/data/blogs";
 
 interface FormValues {
   email: string;

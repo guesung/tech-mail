@@ -40,10 +40,7 @@ async function updateBlogsWithOgImages() {
     });
   }
 
-  fs.writeFileSync(
-    "./src/data/blogs-with-images.json",
-    JSON.stringify(updatedBlogs, null, 2)
-  );
+  fs.writeFileSync("./src/data/blogs", JSON.stringify(updatedBlogs, null, 2));
 }
 
 updateBlogsWithOgImages();
