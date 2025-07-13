@@ -6,18 +6,14 @@ import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 import { Checkbox } from "./ui/checkbox";
 import { Input } from "./ui/input";
-import { Blog } from "@/types";
-
-interface Props {
-  blogs: Blog[];
-}
+import blogs from "@/data/blogs-with-images.json";
 
 interface FormValues {
   email: string;
   blogIds: string[];
 }
 
-export default function SubscribeForm({ blogs }: Props) {
+export default function SubscribeForm() {
   const {
     register,
     handleSubmit,
@@ -65,7 +61,7 @@ export default function SubscribeForm({ blogs }: Props) {
             render={({ field }) => (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {blogs.map((blog) => (
-                  <label key={blog.rssUrl} className="flex items-center gap-2">
+                  <label key={blog.id} className="flex items-center gap-2">
                     <Checkbox
                       checked={field.value.includes(blog.id)}
                       onCheckedChange={(checked) => {
