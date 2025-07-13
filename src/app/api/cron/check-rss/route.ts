@@ -1,4 +1,5 @@
 import { getSubscribers } from "@/apis/supabase";
+import EmailTemplate from "@/components/EmailTemplate";
 import blogs from "@/data/blogs-with-images.json";
 import { sendEmail } from "@/lib/email";
 import { fetchRssFeed } from "@/lib/rss-parser";
@@ -11,8 +12,8 @@ const checkRss = async () => {
   const todayArticles = await Promise.all(
     blogs.map(async (blog) => {
       try {
-        const rssArticles = await fetchRssFeed(blog);
-        return rssArticles.filter((article) => {
+        const articles = await fetchRssFeed(blog);
+        return articles.filter((article) => {
           const publishedAt = new Date(article.publishedAt);
           const today = new Date("2024-06-14");
           return (
@@ -26,23 +27,19 @@ const checkRss = async () => {
     })
   ).then((articles) => articles.flat());
 
-  for (const sub of subscribers) {
-    console.log(sub.subscribed_blog_ids, todayArticles);
+  for (const subscriber of subscribers) {
     const targetArticles = todayArticles.filter((article) =>
-      sub.subscribed_blog_ids.includes(article.blogId)
+      subscriber.subscribed_blog_ids.includes(article.blogId)
     );
 
     if (targetArticles.length === 0) continue;
 
-    const html = `<h2>새 글 알림</h2><ul>${targetArticles.map((a) => `<li><a href="${a.url}">${a.title}</a></li>`).join("")}</ul>`;
-
     try {
-      const result = await sendEmail({
-        to: sub.email,
+      return await sendEmail({
+        to: subscriber.email,
         subject: "[TechMail] 구독한 블로그 새 글 알림",
-        html,
+        react: EmailTemplate({ targetArticles }),
       });
-      console.log(result);
     } catch (e) {
       console.log(e);
       continue;
