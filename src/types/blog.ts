@@ -1,11 +1,9 @@
 export interface Blog {
   id: string;
   name: string;
-  rssUrl: string;
-  websiteUrl?: string;
-  description?: string;
-  category?: string[];
-  thumbnailUrl?: string;
+  url: string;
+  logo?: string;
+  rssUrl?: string;
 }
 
 export interface Article {
