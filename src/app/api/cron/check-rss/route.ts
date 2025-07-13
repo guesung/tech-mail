@@ -3,8 +3,18 @@ import EmailTemplate from "@/components/EmailTemplate";
 import blogs from "@/data/blogs-with-images.json";
 import { sendEmail } from "@/lib/email";
 import { fetchRssFeed } from "@/lib/rss-parser";
+import { Blog } from "@/types";
 
 export const dynamic = "force-dynamic";
+
+const fetchTodayArticles = async (blog: Blog) => {
+  const articles = await fetchRssFeed(blog);
+  return articles.filter((article) => {
+    const publishedAt = new Date(article.publishedAt);
+    const today = new Date("2024-06-14");
+    return publishedAt.toLocaleDateString() === today.toLocaleDateString();
+  });
+};
 
 const checkRss = async () => {
   const subscribers = await getSubscribers();
@@ -12,14 +22,7 @@ const checkRss = async () => {
   const todayArticles = await Promise.all(
     blogs.map(async (blog) => {
       try {
-        const articles = await fetchRssFeed(blog);
-        return articles.filter((article) => {
-          const publishedAt = new Date(article.publishedAt);
-          const today = new Date("2024-06-14");
-          return (
-            publishedAt.toLocaleDateString() === today.toLocaleDateString()
-          );
-        });
+        return await fetchTodayArticles(blog);
       } catch (e) {
         console.log(e);
         return [];
