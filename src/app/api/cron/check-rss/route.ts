@@ -1,6 +1,6 @@
 import { getSubscribers } from "@/apis/supabase";
 import EmailTemplate from "@/components/EmailTemplate";
-import blogs from "@/data/blogs";
+import blogs from "@/data/blogs.json";
 import { sendEmail } from "@/lib/email";
 import { fetchRssFeed } from "@/lib/rss-parser";
 import { Blog } from "@/types";
@@ -33,7 +33,7 @@ const checkRss = async () => {
   for (const subscriber of subscribers) {
     const targetArticles = todayArticles.filter(
       (article) =>
-        subscriber.subscribed_blog_ids?.includes(article.blogId) ?? false
+        subscriber.subscribedBlogIds?.includes(article.blogId) ?? false
     );
 
     if (targetArticles.length === 0) continue;

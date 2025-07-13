@@ -1,5 +1,5 @@
 export interface Blog {
-  id: string;
+  id: number;
   name: string;
   url: string;
   logo?: string;
@@ -7,7 +7,7 @@ export interface Blog {
 }
 
 export interface Article {
-  blogId: string;
+  blogId: Blog["id"];
   title: string;
   url: string;
   description?: string;

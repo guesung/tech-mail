@@ -5,6 +5,10 @@ export async function fetchRssFeed(blog: Blog) {
   const parser = new Parser({
     headers: { Accept: "application/rss+xml" },
   });
+  if (!blog.rssUrl) {
+    throw new Error("RSS URL is required");
+  }
+
   const feed = await parser.parseURL(blog.rssUrl);
 
   return feed.items.map(

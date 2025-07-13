@@ -33,8 +33,7 @@ export default function SubscribeForm() {
     const { error } = await supabase.from("subscribers").upsert(
       {
         email: data.email,
-        subscribed_blog_ids: data.blogIds.map((id) => id.toString()),
-        is_active: true,
+        subscribedBlogIds: data.blogIds,
       },
       { onConflict: "email" }
     );

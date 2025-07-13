@@ -96,30 +96,27 @@ export type Database = {
       }
       subscribers: {
         Row: {
-          created_at: string | null
+          createdAt: string | null
           email: string
           id: string
-          is_active: boolean | null
-          is_verified: boolean | null
-          subscribed_blog_ids: string[] | null
+          isVerified: boolean | null
+          subscribedBlogIds: number[] | null
           updated_at: string | null
         }
         Insert: {
-          created_at?: string | null
+          createdAt?: string | null
           email: string
           id?: string
-          is_active?: boolean | null
-          is_verified?: boolean | null
-          subscribed_blog_ids?: string[] | null
+          isVerified?: boolean | null
+          subscribedBlogIds?: number[] | null
           updated_at?: string | null
         }
         Update: {
-          created_at?: string | null
+          createdAt?: string | null
           email?: string
           id?: string
-          is_active?: boolean | null
-          is_verified?: boolean | null
-          subscribed_blog_ids?: string[] | null
+          isVerified?: boolean | null
+          subscribedBlogIds?: number[] | null
           updated_at?: string | null
         }
         Relationships: []

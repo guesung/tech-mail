@@ -33,7 +33,7 @@ async function updateBlogsWithOgImages() {
   const updatedBlogs = [];
 
   for (const blog of BLOGS) {
-    const ogImage = await fetchOgImage(blog.websiteUrl ?? "");
+    const ogImage = await fetchOgImage(blog.url ?? "");
     updatedBlogs.push({
       ...blog,
       ogImage,
