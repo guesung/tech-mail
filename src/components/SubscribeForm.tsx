@@ -53,7 +53,7 @@ export default function SubscribeForm() {
         onSubmit={handleSubmit(onSubmit)}
         className="space-y-4 text-gray-900"
       >
-        <label className="block">
+        <div className="block">
           <span className="block mb-1 font-medium">구독할 블로그</span>
           <Controller
             control={control}
@@ -81,8 +81,8 @@ export default function SubscribeForm() {
               </div>
             )}
           />
-        </label>
-        <label className="block">
+        </div>
+        <div className="block">
           <span className="block mb-1 font-medium">이메일</span>
           <Input
             type="email"
@@ -91,7 +91,7 @@ export default function SubscribeForm() {
             className="mb-2"
             {...register("email", { required: true })}
           />
-        </label>
+        </div>
         <Button type="submit" disabled={isSubmitting} className="w-full">
           {isSubmitting ? "구독 중..." : "구독하기"}
         </Button>
