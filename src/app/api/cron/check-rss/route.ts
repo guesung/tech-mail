@@ -31,8 +31,9 @@ const checkRss = async () => {
   ).then((articles) => articles.flat());
 
   for (const subscriber of subscribers) {
-    const targetArticles = todayArticles.filter((article) =>
-      subscriber.subscribed_blog_ids.includes(article.blogId)
+    const targetArticles = todayArticles.filter(
+      (article) =>
+        subscriber.subscribed_blog_ids?.includes(article.blogId) ?? false
     );
 
     if (targetArticles.length === 0) continue;

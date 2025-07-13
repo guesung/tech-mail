@@ -1,7 +1,7 @@
 import { supabase } from "@/lib/supabase";
-import { Blog, Subscriber } from "@/types";
+import { Tables } from "@/types";
 
-export const getBlogs = async (): Promise<Blog[]> => {
+export const getBlogs = async (): Promise<Tables<"blogs">[]> => {
   const { data: blogs, error: blogError } = await supabase
     .from("blogs")
     .select("*")
@@ -11,7 +11,7 @@ export const getBlogs = async (): Promise<Blog[]> => {
   return blogs;
 };
 
-export const getSubscribers = async (): Promise<Subscriber[]> => {
+export const getSubscribers = async (): Promise<Tables<"subscribers">[]> => {
   const { data: subscribers, error: subError } = await supabase
     .from("subscribers")
     .select("*")
