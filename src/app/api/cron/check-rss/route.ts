@@ -11,7 +11,8 @@ const fetchTodayArticles = async (blog: Blog) => {
   const articles = await fetchRssFeed(blog);
   return articles.filter((article) => {
     const publishedAt = new Date(article.publishedAt);
-    const today = new Date("2024-06-14");
+    const today = new Date();
+
     return publishedAt.toLocaleDateString() === today.toLocaleDateString();
   });
 };
@@ -24,7 +25,7 @@ const checkRss = async () => {
       try {
         return await fetchTodayArticles(blog);
       } catch (e) {
-        console.log(e);
+        console.error(`Failed to fetch articles for ${blog.name}: ${e}`);
         return [];
       }
     })
@@ -45,7 +46,7 @@ const checkRss = async () => {
         react: EmailTemplate({ targetArticles }),
       });
     } catch (e) {
-      console.log(e);
+      console.error(`Failed to send email to ${subscriber.email}: ${e}`);
       continue;
     }
   }
@@ -56,7 +57,7 @@ export async function GET() {
     const result = await checkRss();
     return Response.json({ inserted: result });
   } catch (error) {
-    console.error(error);
+    console.error(`Failed to check RSS: ${error}`);
     return Response.json({ error }, { status: 500 });
   }
 }

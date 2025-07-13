@@ -2,8 +2,8 @@ export interface Blog {
   id: number;
   name: string;
   url: string;
-  logo?: string;
-  rssUrl?: string;
+  logo: string;
+  rssUrl: string;
 }
 
 export interface Article {
