@@ -14,20 +14,15 @@ export interface Blog {
   rssUrl: string;
   websiteUrl?: string;
   description?: string;
-  category?: string;
-  logo_url?: string;
-  is_active: boolean;
-  created_at: string;
-  updated_at: string;
+  category?: string[];
+  thumbnailUrl?: string;
 }
 
 export interface Article {
-  id: string;
-  blog_id: string;
+  blogId: string;
   title: string;
   url: string;
   description?: string;
   author?: string;
-  published_at: string;
-  crawled_at: string;
+  publishedAt: string;
 }

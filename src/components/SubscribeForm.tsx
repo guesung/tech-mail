@@ -6,21 +6,15 @@ import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 import { Checkbox } from "./ui/checkbox";
 import { Input } from "./ui/input";
-
-interface BlogInfo {
-  name: string;
-  rssUrl: string;
-  websiteUrl: string;
-  ogImage: string;
-}
+import { Blog } from "@/types";
 
 interface Props {
-  blogs: BlogInfo[];
+  blogs: Blog[];
 }
 
 interface FormValues {
   email: string;
-  rssUrls: string[];
+  blogIds: string[];
 }
 
 export default function SubscribeForm({ blogs }: Props) {
@@ -31,16 +25,10 @@ export default function SubscribeForm({ blogs }: Props) {
     formState: { isSubmitting },
     reset,
   } = useForm<FormValues>({
-    defaultValues: { email: "", rssUrls: [] },
+    defaultValues: { email: "", blogIds: [] },
   });
   const [result, setResult] = React.useState<string | null>(null);
   const [error, setErrorState] = React.useState(false);
-
-  // useEffect(() => {
-  //   (async () => {
-  //     checkRss();
-  //   })();
-  // }, []);
 
   const onSubmit = async (data: FormValues) => {
     setResult(null);
@@ -48,7 +36,7 @@ export default function SubscribeForm({ blogs }: Props) {
     const { error } = await supabase.from("subscribers").upsert(
       {
         email: data.email,
-        subscribed_blog_ids: data.rssUrls,
+        subscribed_blog_ids: data.blogIds,
         is_active: true,
       },
       { onConflict: "email" }
@@ -73,25 +61,23 @@ export default function SubscribeForm({ blogs }: Props) {
           <span className="block mb-1 font-medium">구독할 블로그</span>
           <Controller
             control={control}
-            name="rssUrls"
+            name="blogIds"
             render={({ field }) => (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {blogs.map((blog) => (
                   <label key={blog.rssUrl} className="flex items-center gap-2">
                     <Checkbox
-                      checked={field.value.includes(blog.rssUrl)}
+                      checked={field.value.includes(blog.id)}
                       onCheckedChange={(checked) => {
                         if (checked) {
-                          field.onChange([...field.value, blog.rssUrl]);
+                          field.onChange([...field.value, blog.id]);
                         } else {
                           field.onChange(
-                            field.value.filter(
-                              (id: string) => id !== blog.rssUrl
-                            )
+                            field.value.filter((id: string) => id !== blog.id)
                           );
                         }
                       }}
-                      id={blog.rssUrl}
+                      id={blog.id}
                     />
                     <span className="text-gray-900">{blog.name}</span>
                   </label>

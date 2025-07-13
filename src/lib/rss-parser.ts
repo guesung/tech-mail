@@ -1,19 +1,21 @@
 import Parser from "rss-parser";
-import type { Article } from "@/types";
+import type { Article, Blog } from "@/types";
 
-export async function fetchRssFeed(url: string) {
-  const parser = new Parser();
-  const feed = await parser.parseURL(url);
+export async function fetchRssFeed(blog: Blog) {
+  const parser = new Parser({
+    headers: { Accept: "application/rss+xml" },
+  });
+  const feed = await parser.parseURL(blog.rssUrl);
+
   return feed.items.map(
     (item) =>
       ({
-        blog_id: "",
+        blogId: blog.id,
         title: item.title ?? "",
         url: item.link ?? "",
         description: item.contentSnippet ?? item.content ?? "",
         author: item.creator ?? item.author ?? "",
-        published_at: item.isoDate ?? item.pubDate ?? "",
-        crawled_at: new Date().toISOString(),
+        publishedAt: item.isoDate ?? item.pubDate ?? "",
       }) as Article
   );
 }
