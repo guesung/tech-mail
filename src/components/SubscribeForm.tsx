@@ -7,6 +7,7 @@ import { Card } from "./ui/card";
 import { Checkbox } from "./ui/checkbox";
 import { Input } from "./ui/input";
 import blogs from "@/data/blogs.json";
+import Image from "next/image";
 
 interface FormValues {
   email: string;
@@ -74,6 +75,14 @@ export default function SubscribeForm() {
                         }
                       }}
                       id={blog.id.toString()}
+                    />
+                    <Image
+                      src={`/blogs/${blog.logo}`}
+                      alt={blog.name}
+                      width={24}
+                      height={24}
+                      className="rounded object-contain"
+                      style={{ minWidth: 24, minHeight: 24 }}
                     />
                     <span className="text-gray-900">{blog.name}</span>
                   </label>
