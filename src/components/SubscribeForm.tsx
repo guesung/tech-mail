@@ -88,36 +88,145 @@ export default function SubscribeForm() {
     <Card className="p-6 mb-4">
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="space-y-4 text-gray-900"
+        className="space-y-6 text-gray-900"
       >
-        <div className="block">
-          <span className="block mb-1 font-medium">구독할 블로그</span>
-          <Controller
-            control={control}
-            name="blogIds"
-            render={({ field }) => (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {blogs
-                  .filter((blog) => blog.show)
-                  .map((blog) => (
-                    <BlogCheckboxItem
-                      key={blog.name}
-                      blog={blog}
-                      checked={field.value.includes(blog.name)}
-                      onCheckedChange={(checked) => {
-                        if (checked) {
-                          field.onChange([...field.value, blog.name]);
-                        } else {
+        <div className="space-y-4">
+          {/* 개인 블로그 섹션 */}
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center gap-2">
+              👤 개인 블로그
+            </h3>
+            <Controller
+              control={control}
+              name="blogIds"
+              render={({ field }) => {
+                const personalBlogs = blogs.filter(
+                  (blog) => blog.show && !blog.company
+                );
+                const allPersonalSelected = personalBlogs.every((blog) =>
+                  field.value.includes(blog.name)
+                );
+
+                return (
+                  <div className="space-y-3">
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      onClick={() => {
+                        if (allPersonalSelected) {
+                          // Unselect all personal blogs
                           field.onChange(
-                            field.value.filter((id) => id !== blog.name)
+                            field.value.filter(
+                              (id) =>
+                                !personalBlogs.some((blog) => blog.name === id)
+                            )
                           );
+                        } else {
+                          // Select all personal blogs
+                          const personalBlogNames = personalBlogs.map(
+                            (blog) => blog.name
+                          );
+                          field.onChange([
+                            ...field.value,
+                            ...personalBlogNames,
+                          ]);
                         }
                       }}
-                    />
-                  ))}
-              </div>
-            )}
-          />
+                      className="text-sm"
+                    >
+                      {allPersonalSelected ? "전체 해제" : "전체 선택"}
+                    </Button>
+                    <div className="grid grid-cols-2 gap-2">
+                      {personalBlogs.map((blog) => (
+                        <BlogCheckboxItem
+                          key={blog.name}
+                          blog={blog}
+                          checked={field.value.includes(blog.name)}
+                          onCheckedChange={(checked) => {
+                            if (checked) {
+                              field.onChange([...field.value, blog.name]);
+                            } else {
+                              field.onChange(
+                                field.value.filter((id) => id !== blog.name)
+                              );
+                            }
+                          }}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                );
+              }}
+            />
+          </div>
+
+          {/* 기업 블로그 섹션 */}
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center gap-2">
+              🏢 기업 블로그
+            </h3>
+            <Controller
+              control={control}
+              name="blogIds"
+              render={({ field }) => {
+                const companyBlogs = blogs.filter(
+                  (blog) => blog.show && blog.company
+                );
+                const allCompanySelected = companyBlogs.every((blog) =>
+                  field.value.includes(blog.name)
+                );
+
+                return (
+                  <div className="space-y-3">
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      onClick={() => {
+                        if (allCompanySelected) {
+                          // Unselect all company blogs
+                          field.onChange(
+                            field.value.filter(
+                              (id) =>
+                                !companyBlogs.some((blog) => blog.name === id)
+                            )
+                          );
+                        } else {
+                          // Select all company blogs
+                          const companyBlogNames = companyBlogs.map(
+                            (blog) => blog.name
+                          );
+                          field.onChange([...field.value, ...companyBlogNames]);
+                        }
+                      }}
+                      className="text-sm"
+                    >
+                      {allCompanySelected ? "전체 해제" : "전체 선택"}
+                    </Button>
+                    <div className="grid grid-cols-2 gap-2">
+                      {companyBlogs.map((blog) => (
+                        <BlogCheckboxItem
+                          key={blog.name}
+                          blog={blog}
+                          checked={field.value.includes(blog.name)}
+                          onCheckedChange={(checked) => {
+                            if (checked) {
+                              field.onChange([...field.value, blog.name]);
+                            } else {
+                              field.onChange(
+                                field.value.filter((id) => id !== blog.name)
+                              );
+                            }
+                          }}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                );
+              }}
+            />
+          </div>
         </div>
         <div className="block">
           <span className="block mb-1 font-medium">이메일</span>
