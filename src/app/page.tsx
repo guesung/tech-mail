@@ -3,7 +3,7 @@ import SubscribeForm from "@/components/SubscribeForm";
 
 export default function Home() {
   return (
-    <main className="mx-auto p-6">
+    <main className="max-w-xl mx-auto p-6">
       <Header />
       <SubscribeForm />
     </main>
