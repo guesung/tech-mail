@@ -14,6 +14,13 @@
     "show": true
   },
   {
+    "name": "개발자 황준일",
+    "url": "https://junilhwang.github.io/TIL/",
+    "rssUrl": "https://junilhwang.github.io/TIL/rss.xml",
+    "logo": "junilhwang.png",
+    "show": true
+  },
+  {
     "name": "기억보단 기록을 (이동욱)",
     "url": "https://jojoldu.tistory.com/",
     "rssUrl": "https://jojoldu.tistory.com/rss",
@@ -61,14 +68,14 @@
     "url": "https://library.gabia.com/",
     "rssUrl": "https://library.gabia.com/feed/",
     "logo": "gabia.png",
-    "show": false
+    "show": true
   },
   {
     "name": "딜라이트룸",
     "url": "https://medium.com/delightroom",
     "rssUrl": "https://medium.com/feed/delightroom",
     "logo": "delightroom.jpeg",
-    "show": false
+    "show": true
   },
   {
     "name": "인포그랩",
@@ -89,28 +96,28 @@
     "url": "https://techblog.gccompany.co.kr/",
     "rssUrl": "https://techblog.gccompany.co.kr/feed/",
     "logo": "goodchoice.png",
-    "show": false
+    "show": true
   },
   {
     "name": "SSG.COM",
     "url": "https://medium.com/ssgtech",
     "rssUrl": "https://medium.com/feed/ssgtech",
     "logo": "ssgcom.png",
-    "show": false
+    "show": true
   },
   {
     "name": "카카오",
     "url": "https://tech.kakao.com/blog",
     "rssUrl": "https://tech.kakao.com/feed/",
     "logo": "kakao.png",
-    "show": false
+    "show": true
   },
   {
     "name": "무신사",
     "url": "https://medium.com/musinsa-tech",
     "rssUrl": "https://medium.com/feed/musinsa-tech",
     "logo": "musinsa.ico",
-    "show": false
+    "show": true
   },
   {
     "name": "NHN",
@@ -131,7 +138,7 @@
     "url": "https://medium.com/daangn",
     "rssUrl": "https://medium.com/feed/daangn",
     "logo": "daangn.ico",
-    "show": false
+    "show": true
   },
   {
     "name": "교보DTS",
@@ -145,14 +152,14 @@
     "url": "https://helloworld.kurly.com/",
     "rssUrl": "https://helloworld.kurly.com/feed.xml",
     "logo": "kurly.png",
-    "show": false
+    "show": true
   },
   {
     "name": "올리브영",
     "url": "https://oliveyoung.tech/blog/",
-    "rssUrl": "https://oliveyoung.tech/blog/feed/",
+    "rssUrl": "https://oliveyoung.tech/rss.xml",
     "logo": "oliveyoung.png",
-    "show": false
+    "show": true
   },
   {
     "name": "AB180",

@@ -8,6 +8,7 @@ import { Checkbox } from "./ui/checkbox";
 import { Input } from "./ui/input";
 import blogs from "@/data/blogs.json";
 import Image from "next/image";
+import Link from "next/link";
 
 interface FormValues {
   email: string;
@@ -40,7 +41,9 @@ function BlogCheckboxItem({
         className="rounded object-contain"
         style={{ minWidth: 24, minHeight: 24 }}
       />
-      <span className="text-gray-900">{blog.name}</span>
+      <Link href={blog.url} target="_blank">
+        <span className="text-gray-900">{blog.name}</span>
+      </Link>
     </label>
   );
 }
