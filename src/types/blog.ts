@@ -1,13 +1,9 @@
-export interface Blog {
-  id: number;
-  name: string;
-  url: string;
-  logo: string;
-  rssUrl: string;
-}
+import blogs from "@/data/blogs.json";
+
+export type Blog = (typeof blogs)[number];
 
 export interface Article {
-  blogId: Blog["id"];
+  blogName: string;
   title: string;
   url: string;
   description?: string;

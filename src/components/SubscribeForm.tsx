@@ -12,7 +12,7 @@ import Link from "next/link";
 
 interface FormValues {
   email: string;
-  blogIds: string[];
+  selectedBlogNames: string[];
 }
 
 interface BlogCheckboxItemProps {
@@ -58,7 +58,7 @@ export default function SubscribeForm() {
   } = useForm<FormValues>({
     defaultValues: {
       email: "",
-      blogIds: [],
+      selectedBlogNames: [],
     },
   });
   const [result, setResult] = React.useState<string | null>(null);
@@ -70,7 +70,7 @@ export default function SubscribeForm() {
     const { error } = await supabase.from("subscribers").upsert(
       {
         email: data.email,
-        subscribedBlogIds: data.blogIds,
+        subscribedBlogIds: data.selectedBlogNames,
       },
       { onConflict: "email" }
     );
@@ -98,7 +98,7 @@ export default function SubscribeForm() {
             </h3>
             <Controller
               control={control}
-              name="blogIds"
+              name="selectedBlogNames"
               render={({ field }) => {
                 const personalBlogs = blogs.filter(
                   (blog) => blog.show && !blog.company
@@ -168,7 +168,7 @@ export default function SubscribeForm() {
             </h3>
             <Controller
               control={control}
-              name="blogIds"
+              name="selectedBlogNames"
               render={({ field }) => {
                 const companyBlogs = blogs.filter(
                   (blog) => blog.show && blog.company

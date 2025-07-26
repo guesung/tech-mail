@@ -12,7 +12,7 @@ export async function fetchRssFeed(blog: Blog) {
   return (feed.items || []).map(
     (item) =>
       ({
-        blogId: blog.id,
+        blogName: blog.name,
         title: item.title ?? "",
         url: item.link ?? "",
         description: item.contentSnippet ?? item.content ?? "",

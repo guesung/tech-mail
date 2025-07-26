@@ -34,7 +34,7 @@ const checkRss = async () => {
   for (const subscriber of subscribers) {
     const targetArticles = todayArticles.filter(
       (article) =>
-        subscriber.subscribedBlogIds?.includes(article.blogId) ?? false
+        subscriber.subscribedBlogIds?.includes(article.blogName) ?? false
     );
 
     try {
