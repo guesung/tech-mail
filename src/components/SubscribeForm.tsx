@@ -11,7 +11,7 @@ import Image from "next/image";
 
 interface FormValues {
   email: string;
-  blogIds: number[];
+  blogIds: string[];
 }
 
 interface BlogCheckboxItemProps {
@@ -30,7 +30,7 @@ function BlogCheckboxItem({
       <Checkbox
         checked={checked}
         onCheckedChange={onCheckedChange}
-        id={blog.id.toString()}
+        id={blog.name}
       />
       <Image
         src={`/blogs/${blog.logo}`}
@@ -94,22 +94,24 @@ export default function SubscribeForm() {
             name="blogIds"
             render={({ field }) => (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {blogs.map((blog) => (
-                  <BlogCheckboxItem
-                    key={blog.id}
-                    blog={blog}
-                    checked={field.value.includes(blog.id)}
-                    onCheckedChange={(checked) => {
-                      if (checked) {
-                        field.onChange([...field.value, blog.id]);
-                      } else {
-                        field.onChange(
-                          field.value.filter((id) => id !== blog.id)
-                        );
-                      }
-                    }}
-                  />
-                ))}
+                {blogs
+                  .filter((blog) => blog.show)
+                  .map((blog) => (
+                    <BlogCheckboxItem
+                      key={blog.name}
+                      blog={blog}
+                      checked={field.value.includes(blog.name)}
+                      onCheckedChange={(checked) => {
+                        if (checked) {
+                          field.onChange([...field.value, blog.name]);
+                        } else {
+                          field.onChange(
+                            field.value.filter((id) => id !== blog.name)
+                          );
+                        }
+                      }}
+                    />
+                  ))}
               </div>
             )}
           />

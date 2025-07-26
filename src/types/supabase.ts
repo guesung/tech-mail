@@ -100,7 +100,7 @@ export type Database = {
           email: string
           id: string
           isVerified: boolean | null
-          subscribedBlogIds: number[] | null
+          subscribedBlogIds: string[]
           updated_at: string | null
         }
         Insert: {
@@ -108,7 +108,7 @@ export type Database = {
           email: string
           id?: string
           isVerified?: boolean | null
-          subscribedBlogIds?: number[] | null
+          subscribedBlogIds: string[]
           updated_at?: string | null
         }
         Update: {
@@ -116,7 +116,7 @@ export type Database = {
           email?: string
           id?: string
           isVerified?: boolean | null
-          subscribedBlogIds?: number[] | null
+          subscribedBlogIds?: string[]
           updated_at?: string | null
         }
         Relationships: []

@@ -37,8 +37,6 @@ const checkRss = async () => {
         subscriber.subscribedBlogIds?.includes(article.blogId) ?? false
     );
 
-    // if (targetArticles.length === 0) continue;
-
     try {
       return await sendEmail({
         to: subscriber.email,
