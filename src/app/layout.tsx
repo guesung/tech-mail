@@ -36,20 +36,20 @@ export const metadata: Metadata = {
   description:
     "관심있는 블로그를 선택하고 이메일을 입력하면 새 글이 올라올 때 알림을 받을 수 있습니다.",
   keywords: ["블로그", "알림", "이메일", "구독", "RSS", "기술블로그"],
-  authors: [{ name: "Tech Mail Team" }],
-  creator: "Tech Mail",
-  publisher: "Tech Mail",
+  authors: [{ name: "guesung" }],
+  creator: "guesung",
+  publisher: "guesung",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://tech-mail.vercel.app"),
+  metadataBase: new URL("https://www.tech-mail.shop/"),
   openGraph: {
     title: "Tech Mail - 블로그 알림 서비스",
     description:
       "관심있는 블로그를 선택하고 이메일을 입력하면 새 글이 올라올 때 알림을 받을 수 있습니다.",
-    url: "https://tech-mail.vercel.app",
+    url: "https://www.tech-mail.shop/",
     siteName: "Tech Mail",
     locale: "ko_KR",
     type: "website",
@@ -70,9 +70,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  verification: {
-    google: "your-google-verification-code",
   },
 };
 
