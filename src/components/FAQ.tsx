@@ -124,6 +124,9 @@ export default function FAQ() {
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-2xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() =>
+                window.open("https://open.kakao.com/o/s9kcjdJh", "_blank")
+              }
             >
               문의하기
             </motion.button>
