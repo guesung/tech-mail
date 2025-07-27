@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import blogsData from "@/data/blogs.json";
+import Image from "next/image";
 
 export default function BlogGrid() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -134,10 +135,12 @@ export default function BlogGrid() {
                   whileHover={{ rotate: 5, scale: 1.1 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <img
+                  <Image
                     src={`/blogs/${blog.logo}`}
                     alt={blog.name}
-                    className="w-12 h-12 object-contain"
+                    width={48}
+                    height={48}
+                    className="object-contain"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.src = "/blogs/default.png";
