@@ -3,8 +3,8 @@ import SubscribeForm from "./_components/SubscribeForm";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-50">
-      <div className="max-w-2xl mx-auto py-12 px-6">
+    <main className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="max-w-2xl mx-auto px-6">
         <Header />
         <SubscribeForm />
       </div>
