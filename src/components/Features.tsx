@@ -74,14 +74,12 @@ export default function Features() {
               <motion.div
                 className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 h-full"
                 whileHover={{
-                  y: -10,
-                  scale: 1.02,
-                  boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                  scale: 1.05,
                 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.2 }}
               >
                 <motion.div
-                  className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center text-2xl mb-6`}
+                  className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl mb-6"
                   whileHover={{ rotate: 5, scale: 1.1 }}
                   transition={{ duration: 0.2 }}
                 >
@@ -95,23 +93,6 @@ export default function Features() {
                 <p className="text-gray-600 leading-relaxed">
                   {feature.description}
                 </p>
-
-                {/* 호버 시 나타나는 추가 정보 */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                >
-                  <div className="text-white text-center">
-                    <div className="text-3xl mb-4">{feature.icon}</div>
-                    <div className="text-lg font-semibold mb-2">
-                      {feature.title}
-                    </div>
-                    <div className="text-sm opacity-90">
-                      {feature.description}
-                    </div>
-                  </div>
-                </motion.div>
               </motion.div>
             </motion.div>
           ))}
