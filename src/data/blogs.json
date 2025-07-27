@@ -64,6 +64,14 @@
     "company": true
   },
   {
+    "name": "인프랩",
+    "url": "https://tech.inflab.com/",
+    "rssUrl": "https://tech.inflab.com/rss.xml",
+    "logo": "inflab.png",
+    "show": true,
+    "company": true
+  },
+  {
     "name": "라인",
     "url": "https://engineering.linecorp.com/",
     "rssUrl": "https://engineering.linecorp.com/ko/feed/index.html",
