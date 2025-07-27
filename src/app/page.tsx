@@ -1,13 +1,23 @@
-import Header from "@/components/Header";
-import SubscribeForm from "@/components/SubscribeForm";
+import Navigation from "@/components/Navigation";
+import Hero from "@/components/Hero";
+import Features from "@/components/Features";
+import Stats from "@/components/Stats";
+import BlogGrid from "@/components/BlogGrid";
+import FAQ from "@/components/FAQ";
+import CTA from "@/components/CTA";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-50">
-      <div className="max-w-2xl mx-auto py-12 px-6">
-        <Header />
-        <SubscribeForm />
-      </div>
+    <main className="min-h-screen">
+      <Navigation />
+      <Hero />
+      <Features />
+      <Stats />
+      <BlogGrid />
+      <FAQ />
+      <CTA />
+      <Footer />
     </main>
   );
 }
