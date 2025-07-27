@@ -1,11 +1,10 @@
-import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
-import Features from "@/components/Features";
-import Stats from "@/components/Stats";
-import BlogGrid from "@/components/BlogGrid";
-import FAQ from "@/components/FAQ";
-import CTA from "@/components/CTA";
-import Footer from "@/components/Footer";
+import Navigation from "./_components/Navigation";
+import Hero from "./_components/Hero";
+import Features from "./_components/Features";
+import BlogGrid from "./_components/BlogGrid";
+import FAQ from "./_components/FAQ";
+import CTA from "./_components/CTA";
+import Footer from "./_components/Footer";
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
       <Navigation />
       <Hero />
       <Features />
-      {/* <Stats /> */}
       <BlogGrid />
       <FAQ />
       <CTA />

@@ -1,9 +1,9 @@
 import { getSubscribers } from "@/apis/supabase";
-import EmailTemplate from "@/components/EmailTemplate";
 import blogs from "@/data/blogs.json";
 import { sendEmail } from "@/lib/email";
 import { fetchRssFeed } from "@/lib/rss-parser";
 import { Blog } from "@/types";
+import EmailTemplate from "./_components/EmailTemplate";
 
 export const dynamic = "force-dynamic";
 

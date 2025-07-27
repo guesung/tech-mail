@@ -1,5 +1,5 @@
-import Header from "@/components/Header";
-import SubscribeForm from "@/components/SubscribeForm";
+import Header from "./_components/Header";
+import SubscribeForm from "./_components/SubscribeForm";
 
 export default function Home() {
   return (
