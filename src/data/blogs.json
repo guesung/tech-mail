@@ -36,7 +36,7 @@
     "url": "https://d2.naver.com/",
     "rssUrl": "https://d2.naver.com/d2.atom",
     "logo": "naver.png",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -44,7 +44,7 @@
     "url": "https://devocean.sk.com/",
     "rssUrl": "",
     "logo": "devocean.png",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -52,7 +52,7 @@
     "url": "https://aws.amazon.com/ko/blogs",
     "rssUrl": "https://aws.amazon.com/ko/blogs/korea/feed/",
     "logo": "aws.jpeg",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -93,7 +93,7 @@
     "url": "https://insight.infograb.net/blog",
     "rssUrl": "https://insight.infograb.net/blog/atom.xml",
     "logo": "infograb.jpeg",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -141,7 +141,7 @@
     "url": "https://meetup.nhncloud.com/",
     "rssUrl": "https://meetup.nhncloud.com/rss",
     "logo": "nhn.jpeg",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -149,7 +149,7 @@
     "url": "https://tech.devsisters.com/",
     "rssUrl": "https://tech.devsisters.com/rss.xml",
     "logo": "devsisters.png",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -165,7 +165,7 @@
     "url": "https://blog.kyobodts.co.kr/",
     "rssUrl": "https://blog.kyobodts.co.kr/rss",
     "logo": "kyobo.jpeg",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -229,7 +229,7 @@
     "url": "https://medium.com/riiid-teamblog-kr",
     "rssUrl": "https://medium.com/feed/riiid-teamblog-kr",
     "logo": "riiid.png",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -237,7 +237,7 @@
     "url": "https://medium.com/creatrip",
     "rssUrl": "https://medium.com/feed/creatrip",
     "logo": "creatrip.png",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -261,7 +261,7 @@
     "url": "https://www.makinarocks.ai/category/tech",
     "rssUrl": "https://www.makinarocks.ai/category/tech/feed/",
     "logo": "makinarocks.jpeg",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -269,7 +269,7 @@
     "url": "https://tech.cloud.nongshim.co.kr",
     "rssUrl": "https://tech.cloud.nongshim.co.kr/feed/",
     "logo": "nongshim-nds.png",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -290,7 +290,7 @@
   },
   {
     "name": "베스핀글로벌",
-    "url": "https://blog.bespinglobal.com/post/category",
+    "url": "https://blog.bespinglobal.com/",
     "rssUrl": "https://blog.bespinglobal.com/feed/",
     "logo": "bespin-global.png",
     "show": false,
@@ -301,13 +301,13 @@
     "url": "https://11st-tech.github.io/",
     "rssUrl": "",
     "logo": "11st.png",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
     "name": "크림",
-    "url": "https://medium.com/kream-%EA",
-    "rssUrl": "https://medium.com/feed/kream-tech",
+    "url": "https://medium.com/kream-%EA%B8%B0%EC%88%A0-%EB%B8%94%EB%A1%9C%EA%B7%B8",
+    "rssUrl": "https://medium.com/feed/kream-%EA%B8%B0%EC%88%A0-%EB%B8%94%EB%A1%9C%EA%B7%B8",
     "logo": "kream.png",
     "show": false,
     "company": true
@@ -325,7 +325,7 @@
     "url": "https://medium.com/catchtable",
     "rssUrl": "https://medium.com/feed/catchtable",
     "logo": "catchtable.png",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -333,7 +333,7 @@
     "url": "https://www.postype.com/@team",
     "rssUrl": "https://www.postype.com/@team/rss",
     "logo": "postype.png",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -341,7 +341,7 @@
     "url": "https://boostbrothers.github.io/",
     "rssUrl": "https://boostbrothers.github.io/atom.xml",
     "logo": "bbros.png",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -349,7 +349,7 @@
     "url": "https://developers.kakaomobility.com/techblogs",
     "rssUrl": "",
     "logo": "kakaomobility.ico",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -357,7 +357,7 @@
     "url": "https://blog.mathpresso.com/",
     "rssUrl": "https://blog.mathpresso.com/feed/",
     "logo": "mathpresso.jpeg",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -381,7 +381,7 @@
     "url": "https://techblog.pet-friends.co.kr",
     "rssUrl": "https://techblog.pet-friends.co.kr/feed/",
     "logo": "petfriends.jpeg",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -397,7 +397,7 @@
     "url": "https://tonymoly-tech.medium.com/",
     "rssUrl": "https://tonymoly-tech.medium.com/feed",
     "logo": "tonymoly.png",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -405,7 +405,7 @@
     "url": "https://spoqa.github.io/",
     "rssUrl": "https://spoqa.github.io/atom.xml",
     "logo": "spoqa.png",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -413,12 +413,12 @@
     "url": "https://tech.remember.co.kr/",
     "rssUrl": "https://tech.remember.co.kr/feed/",
     "logo": "remember.png",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
     "name": "컴투스",
-    "url": "https://on.com2us.com/tag/%",
+    "url": "https://on.com2us.com/",
     "rssUrl": "https://on.com2us.com/feed/",
     "logo": "com2us.jpeg",
     "show": false,
@@ -445,7 +445,7 @@
     "url": "https://ridicorp.com/story-category/tech",
     "rssUrl": "",
     "logo": "ridi.png",
-    "show": true,
+    "show": false,
     "company": true
   },
   {
@@ -469,7 +469,7 @@
     "url": "https://blog.banksalad.com/",
     "rssUrl": "https://blog.banksalad.com/rss.xml",
     "logo": "banksalad.ico",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -477,7 +477,7 @@
     "url": "https://team.modusign.co.kr/tagged",
     "rssUrl": "https://team.modusign.co.kr/feed/",
     "logo": "modusign.png",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -490,10 +490,10 @@
   },
   {
     "name": "네이버 DnA",
-    "url": "https://medium.com/naver-dna-tech",
-    "rssUrl": "https://medium.com/feed/naver-dna-tech",
+    "url": "https://medium.com/naver-dna-tech-blog",
+    "rssUrl": "https://medium.com/feed/naver-dna-tech-blog",
     "logo": "naver.png",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -517,7 +517,7 @@
     "url": "https://ebay-korea.tistory.com/",
     "rssUrl": "https://ebay-korea.tistory.com/rss",
     "logo": "gmarket.ico",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -565,7 +565,7 @@
     "url": "https://danawalab.github.io/",
     "rssUrl": "https://danawalab.github.io/feed.xml",
     "logo": "danawa.ico",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -581,7 +581,7 @@
     "url": "https://developer-parkssi.github.io/",
     "rssUrl": "https://developer-parkssi.github.io/feed.xml",
     "logo": "default.png",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -589,7 +589,7 @@
     "url": "https://air77.hashnode.dev/",
     "rssUrl": "https://air77.hashnode.dev/rss.xml",
     "logo": "default.png",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -653,7 +653,7 @@
     "url": "https://techblog.yogiyo.co.kr/",
     "rssUrl": "https://techblog.yogiyo.co.kr/feed/",
     "logo": "yogiyo.svg",
-    "show": true,
+    "show": false,
     "company": true
   },
   {
@@ -661,7 +661,7 @@
     "url": "https://8percent.github.io/",
     "rssUrl": "https://8percent.github.io/feed.xml",
     "logo": "8percent.jpeg",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -677,7 +677,7 @@
     "url": "https://netmarble.engineering/",
     "rssUrl": "https://netmarble.engineering/feed/",
     "logo": "netmarble.jpg",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -685,7 +685,7 @@
     "url": "https://saramin.github.io/",
     "rssUrl": "https://saramin.github.io/feed.xml",
     "logo": "saramin.jpeg",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -709,7 +709,7 @@
     "url": "https://bigwaveai.tistory.com/",
     "rssUrl": "https://bigwaveai.tistory.com/rss",
     "logo": "bigwave.png",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -717,7 +717,7 @@
     "url": "https://cntechsystems.tistory.com/",
     "rssUrl": "https://cntechsystems.tistory.com/rss",
     "logo": "cntechsystems.jpeg",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -789,7 +789,7 @@
     "url": "https://tech.kakaoenterprise.com/",
     "rssUrl": "https://tech.kakaoenterprise.com/feed",
     "logo": "kakao-enterprise.jpeg",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -821,7 +821,7 @@
     "url": "https://dealicious-inc.github.io/",
     "rssUrl": "https://dealicious-inc.github.io/feed.xml",
     "logo": "dealiciou.svg",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -885,7 +885,7 @@
     "url": "https://danbi-ncsoft.github.io/",
     "rssUrl": "https://danbi-ncsoft.github.io/feed.xml",
     "logo": "ncsoft-danbi.png",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -957,7 +957,7 @@
     "url": "https://devlog-h.tistory.com/",
     "rssUrl": "https://devlog-h.tistory.com/rss",
     "logo": "humanlab.webp",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
