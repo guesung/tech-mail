@@ -75,8 +75,8 @@ export default function CTA() {
             지금 바로 시작하세요
           </h2>
           <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
-            관심 있는 기술 블로그를 선택하고 이메일을 입력하면 새 글이 올라올
-            때마다 알림을 받을 수 있어요
+            관심 있는 기술 블로그를 선택하고 이메일을 입력하면 매일 오전 8시에
+            정리된 새 글을 받을 수 있어요
           </p>
         </motion.div>
 

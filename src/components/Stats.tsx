@@ -64,7 +64,7 @@ export default function Stats() {
   const stats = [
     { number: 100, label: "기술 블로그", suffix: "+", color: "text-blue-600" },
     { number: 50, label: "구독자", suffix: "K+", color: "text-purple-600" },
-    { number: 1000, label: "일일 알림", suffix: "+", color: "text-green-600" },
+    { number: 1000, label: "일일 전송", suffix: "+", color: "text-green-600" },
     { number: 99, label: "만족도", suffix: "%", color: "text-orange-600" },
   ];
 
@@ -124,8 +124,8 @@ export default function Stats() {
             transition={{ duration: 0.2 }}
           >
             <div className="text-3xl mb-4">⚡</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">응답 속도</h3>
-            <p className="text-gray-600">평균 5분 내 알림</p>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">전송 시간</h3>
+            <p className="text-gray-600">매일 오전 8시 일괄 전송</p>
           </motion.div>
           <motion.div
             className="bg-white p-8 rounded-3xl shadow-lg"
