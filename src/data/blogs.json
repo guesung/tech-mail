@@ -107,9 +107,9 @@
   {
     "name": "카카오페이",
     "url": "https://tech.kakaopay.com/",
-    "rssUrl": "https://tech.kakaopay.com/feed/",
+    "rssUrl": "https://tech.kakaopay.com/rss.xml",
     "logo": "kakaopay.png",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -450,8 +450,8 @@
   },
   {
     "name": "RIDI",
-    "url": "https://ridicorp.com/story-category/tech",
-    "rssUrl": "",
+    "url": "https://ridicorp.com/story-category/tech-blog/",
+    "rssUrl": "https://ridicorp.com/story-category/tech-blog/feed/",
     "logo": "ridi.png",
     "show": false,
     "company": true
@@ -482,7 +482,7 @@
   },
   {
     "name": "모두싸인",
-    "url": "https://team.modusign.co.kr/tagged",
+    "url": "https://team.modusign.co.kr/",
     "rssUrl": "https://team.modusign.co.kr/feed/",
     "logo": "modusign.png",
     "show": true,
@@ -539,9 +539,9 @@
   {
     "name": "직행",
     "url": "https://zighang.inblog.ai/",
-    "rssUrl": "https://zighang.inblog.ai/feed/",
+    "rssUrl": "https://zighang.inblog.io/rss",
     "logo": "zighang.jpeg",
-    "show": false,
+    "show": true,
     "company": true
   },
   {
@@ -579,7 +579,7 @@
   {
     "name": "카카오엔터테인먼트FE",
     "url": "https://fe-developers.kakaoent.com/",
-    "rssUrl": "https://fe-developers.kakaoent.com/feed.xml",
+    "rssUrl": "https://tech.kakaoent.com/rss.xml",
     "logo": "kakao-entertainment.png",
     "show": false,
     "company": true
@@ -626,7 +626,7 @@
   },
   {
     "name": "쿠팡",
-    "url": "https://medium.com/coupang-engineering/kr",
+    "url": "https://medium.com/coupang-engineering",
     "rssUrl": "https://medium.com/feed/coupang-engineering",
     "logo": "coupang.png",
     "show": false,
