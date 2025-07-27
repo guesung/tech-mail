@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Navigation() {
@@ -33,13 +34,7 @@ export default function Navigation() {
             whileTap={{ scale: 0.95 }}
           >
             <div className="text-2xl">📧</div>
-            <span
-              className={`text-xl font-bold ${
-                isScrolled ? "text-gray-900" : "text-white"
-              }`}
-            >
-              Tech Mail
-            </span>
+            <span className="text-xl font-bold text-gray-900">Tech Mail</span>
           </motion.div>
 
           {/* 네비게이션 링크 */}
@@ -83,17 +78,19 @@ export default function Navigation() {
           </div>
 
           {/* CTA 버튼 */}
-          <motion.button
-            className={`px-6 py-2 rounded-2xl font-semibold transition-all duration-200 ${
-              isScrolled
-                ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-lg"
-                : "bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm"
-            }`}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            시작하기
-          </motion.button>
+          <Link href="/">
+            <motion.button
+              className={`px-6 py-2 rounded-2xl font-semibold transition-all duration-200 ${
+                isScrolled
+                  ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-lg"
+                  : "bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm"
+              }`}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              시작하기
+            </motion.button>
+          </Link>
         </div>
       </div>
     </motion.nav>

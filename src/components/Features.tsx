@@ -4,33 +4,33 @@ import { motion } from "framer-motion";
 
 const features = [
   {
-    icon: "📧",
-    title: "이메일 알림",
-    description: "새 글이 올라올 때마다 실시간으로 이메일 알림을 받아요",
-    color: "from-blue-500 to-blue-600",
-  },
-  {
     icon: "🕐",
     title: "일괄 전송",
     description: "매일 오전 8시에 모은 새 글들을 깔끔하게 정리해서 전송해요",
-    color: "from-purple-500 to-purple-600",
+    color: "from-blue-500 to-blue-600",
   },
   {
     icon: "🎯",
     title: "맞춤형 구독",
     description: "관심 있는 기술 블로그만 선택해서 구독할 수 있어요",
-    color: "from-green-500 to-green-600",
+    color: "from-purple-500 to-purple-600",
   },
   {
     icon: "⚡",
     title: "빠른 설정",
     description: "이메일만 입력하면 바로 구독이 시작돼요",
-    color: "from-orange-500 to-orange-600",
+    color: "from-green-500 to-green-600",
   },
   {
     icon: "🔄",
     title: "자동 업데이트",
     description: "RSS 피드를 자동으로 확인해서 최신 글을 놓치지 않아요",
+    color: "from-orange-500 to-orange-600",
+  },
+  {
+    icon: "📱",
+    title: "모바일 친화적",
+    description: "어디서든 이메일로 편리하게 확인할 수 있어요",
     color: "from-red-500 to-red-600",
   },
   {

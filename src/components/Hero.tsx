@@ -7,7 +7,6 @@ export default function Hero() {
   const [currentText, setCurrentText] = useState(0);
   const texts = [
     "하루에 15개 정도의 기술 블로그를 구독했어요",
-    "새 글이 올라올 때마다 이메일로 알림을 받아요",
     "매일 오전 8시에 일괄 전송으로 깔끔하게 정리해요",
     "관심 있는 기술 트렌드를 놓치지 마세요",
   ];
@@ -103,6 +102,7 @@ export default function Hero() {
             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => (window.location.href = "/")}
           >
             지금 바로 시작하기
           </motion.button>
@@ -120,7 +120,7 @@ export default function Hero() {
             whileHover={{ y: -5 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="text-3xl font-bold text-blue-600 mb-2">100+</div>
+            <div className="text-3xl font-bold text-blue-600 mb-2">20+</div>
             <div className="text-gray-600">기술 블로그</div>
           </motion.div>
           <motion.div
@@ -129,7 +129,7 @@ export default function Hero() {
             transition={{ duration: 0.2 }}
           >
             <div className="text-3xl font-bold text-purple-600 mb-2">
-              실시간
+              매일 8시
             </div>
             <div className="text-gray-600">이메일 알림</div>
           </motion.div>
