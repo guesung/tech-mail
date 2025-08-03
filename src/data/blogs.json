@@ -145,6 +145,51 @@
     "order": 1
   },
   {
+    "name": "Guru's Blog",
+    "url": "https://xguru.net/",
+    "rssUrl": "https://xguru.net/feed",
+    "logo": "xguru.png",
+    "show": true,
+    "company": false,
+    "order": 10
+  },
+  {
+    "name": "Outsider's Dev Story",
+    "url": "https://blog.outsider.ne.kr/",
+    "rssUrl": "https://blog.outsider.ne.kr/rss",
+    "logo": "outsider.png",
+    "show": true,
+    "company": false,
+    "order": 10
+  },
+  {
+    "name": "김성광의 블로그",
+    "url": "https://blog.sungkwang.dev/",
+    "rssUrl": "https://blog.sungkwang.dev/rss/",
+    "logo": "sungkwang.png",
+    "show": true,
+    "company": false,
+    "order": 10
+  },
+  {
+    "name": "태곤의 블로그",
+    "url": "https://taegon.kim/",
+    "rssUrl": "https://taegon.kim/feed",
+    "logo": "default.png",
+    "show": true,
+    "company": false,
+    "order": 10
+  },
+  {
+    "name": "milooy",
+    "url": "https://milooy.github.io/rss",
+    "rssUrl": "https://milooy.github.io/rss",
+    "logo": "milooy.png",
+    "show": true,
+    "company": false,
+    "order": 10
+  },
+  {
     "name": "네이버 D2",
     "url": "https://d2.naver.com/",
     "rssUrl": "https://d2.naver.com/d2.atom",
@@ -616,7 +661,7 @@
     "url": "https://whatsmin.hashnode.dev/",
     "rssUrl": "https://whatsmin.hashnode.dev/rss.xml",
     "logo": "default.png",
-    "show": true,
+    "show": false,
     "company": true
   },
   {
@@ -656,7 +701,7 @@
     "url": "https://developer-parkssi.github.io/",
     "rssUrl": "https://developer-parkssi.github.io/feed.xml",
     "logo": "default.png",
-    "show": true,
+    "show": false,
     "company": true
   },
   {
