@@ -6,7 +6,7 @@ import EmailTemplate from "./_components/EmailTemplate";
 
 export const dynamic = "force-dynamic";
 
-const checkRss = async () => {
+const sendDailyArticleEmails = async () => {
   const subscribers = await getSubscribers();
 
   const todayArticles = await Promise.all(
@@ -20,6 +20,7 @@ const checkRss = async () => {
     );
 
     return await sendEmail({
+      from: process.env.NEXT_PUBLIC_FROM_EMAIL!,
       to: subscriber.email,
       subject: "[TechMail] 구독한 블로그 새 글 알림",
       react: EmailTemplate({ targetArticles }),
@@ -29,7 +30,7 @@ const checkRss = async () => {
 
 export async function GET() {
   try {
-    const result = await checkRss();
+    const result = await sendDailyArticleEmails();
     return Response.json({ inserted: result });
   } catch (error) {
     console.error(`Failed to check RSS: ${error}`);
