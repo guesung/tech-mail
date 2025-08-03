@@ -2,7 +2,11 @@ import Parser from "rss-parser";
 
 export async function fetchRssFeed(rssUrl: string) {
   const parser = new Parser({
-    headers: { Accept: "application/rss+xml" },
+    timeout: 10000,
+    headers: {
+      Accept:
+        "application/rss+xml, application/xml, application/atom+xml;charset=UTF-8",
+    },
   });
   if (!rssUrl) throw new Error("RSS URL is required");
 

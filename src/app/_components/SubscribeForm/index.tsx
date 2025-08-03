@@ -60,12 +60,12 @@ export default function SubscribeForm() {
             control={control}
             name="selectedBlogNames"
             render={({ field }) => {
-              const personalBlogs = blogs.filter(
-                (blog) => blog.show && !blog.company
-              );
-              const companyBlogs = blogs.filter(
-                (blog) => blog.show && blog.company
-              );
+              const personalBlogs = blogs
+                .filter((blog) => blog.show && !blog.company)
+                .sort((a, b) => (a.order ?? 100) - (b.order ?? 100));
+              const companyBlogs = blogs
+                .filter((blog) => blog.show && blog.company)
+                .sort((a, b) => (a.order ?? 100) - (b.order ?? 100));
 
               return (
                 <>
