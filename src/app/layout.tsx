@@ -53,6 +53,14 @@ export const metadata: Metadata = {
     siteName: "Tech Mail",
     locale: "ko_KR",
     type: "website",
+    images: [
+      {
+        url: "https://www.tech-mail.shop/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Tech Mail - 블로그 알림 서비스",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
