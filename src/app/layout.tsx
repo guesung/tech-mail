@@ -45,23 +45,6 @@ export const metadata: Metadata = {
     telephone: false,
   },
   metadataBase: new URL("https://www.tech-mail.shop/"),
-  openGraph: {
-    title: "Tech Mail - 블로그 알림 서비스",
-    description:
-      "관심있는 블로그를 선택하고 이메일을 입력하면 새 글이 올라올 때 알림을 받을 수 있습니다.",
-    url: "https://www.tech-mail.shop/",
-    siteName: "Tech Mail",
-    locale: "ko_KR",
-    type: "website",
-    images: [
-      {
-        url: "https://www.tech-mail.shop/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Tech Mail - 블로그 알림 서비스",
-      },
-    ],
-  },
   twitter: {
     card: "summary_large_image",
     title: "Tech Mail - 블로그 알림 서비스",
