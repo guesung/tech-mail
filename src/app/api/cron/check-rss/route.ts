@@ -3,15 +3,20 @@ import blogs from "@/data/blogs.json";
 import { fetchTodayArticles } from "./_utils/articles";
 import { sendEmail } from "@/lib/email";
 import EmailTemplate from "./_components/EmailTemplate";
+import { Article } from "@/types";
 
 export const dynamic = "force-dynamic";
 
 const sendDailyArticleEmails = async () => {
   const subscribers = await getSubscribers();
+  const todayArticles: Article[] = [];
 
-  const todayArticles = await Promise.all(
-    blogs.map(async (blog) => await fetchTodayArticles(blog))
-  ).then((articles) => articles.flat());
+  for (const blog of blogs) {
+    if (!blog.show) continue;
+    const articles = await fetchTodayArticles(blog);
+    console.log(articles);
+    todayArticles.push(...articles);
+  }
 
   for (const subscriber of subscribers) {
     const targetArticles = todayArticles.filter(
