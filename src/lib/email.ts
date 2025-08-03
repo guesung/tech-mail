@@ -12,10 +12,16 @@ interface SendEmailParams {
 export async function sendEmail({ to, subject, react, from }: SendEmailParams) {
   const sender = from || process.env.NEXT_PUBLIC_FROM_EMAIL;
   if (!sender) throw new Error("FROM_EMAIL is not set");
-  return resend.emails.send({
-    from: sender,
-    to,
-    subject,
-    react,
-  });
+
+  try {
+    return resend.emails.send({
+      from: sender,
+      to,
+      subject,
+      react,
+    });
+  } catch (e) {
+    console.error(`Failed to send email to ${to}: ${e}`);
+    throw e;
+  }
 }

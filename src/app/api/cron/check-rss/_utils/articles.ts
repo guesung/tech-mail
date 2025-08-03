@@ -13,13 +13,18 @@ export const formatArticles = (blog: Blog, articles: any[]): Article[] => {
 };
 
 export const fetchTodayArticles = async (blog: Blog) => {
-  const articles = await fetchRssFeed(blog.rssUrl);
-  const formattedArticles = formatArticles(blog, articles);
+  try {
+    const articles = await fetchRssFeed(blog.rssUrl);
+    const formattedArticles = formatArticles(blog, articles);
 
-  return formattedArticles.filter((article) => {
-    const publishedAt = new Date(article.publishedAt);
-    const today = new Date();
+    return formattedArticles.filter((article) => {
+      const publishedAt = new Date(article.publishedAt);
+      const today = new Date();
 
-    return publishedAt.toLocaleDateString() === today.toLocaleDateString();
-  });
+      return publishedAt.toLocaleDateString() === today.toLocaleDateString();
+    });
+  } catch (e) {
+    console.error(`Failed to fetch articles for ${blog.name}: ${e}`);
+    return [];
+  }
 };

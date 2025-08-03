@@ -10,14 +10,7 @@ const checkRss = async () => {
   const subscribers = await getSubscribers();
 
   const todayArticles = await Promise.all(
-    blogs.map(async (blog) => {
-      try {
-        return await fetchTodayArticles(blog);
-      } catch (e) {
-        console.error(`Failed to fetch articles for ${blog.name}: ${e}`);
-        return [];
-      }
-    })
+    blogs.map(async (blog) => await fetchTodayArticles(blog))
   ).then((articles) => articles.flat());
 
   for (const subscriber of subscribers) {
@@ -26,16 +19,11 @@ const checkRss = async () => {
         subscriber.subscribedBlogIds?.includes(article.blogName) ?? false
     );
 
-    try {
-      return await sendEmail({
-        to: subscriber.email,
-        subject: "[TechMail] 구독한 블로그 새 글 알림",
-        react: EmailTemplate({ targetArticles }),
-      });
-    } catch (e) {
-      console.error(`Failed to send email to ${subscriber.email}: ${e}`);
-      continue;
-    }
+    return await sendEmail({
+      to: subscriber.email,
+      subject: "[TechMail] 구독한 블로그 새 글 알림",
+      react: EmailTemplate({ targetArticles }),
+    });
   }
 };
 
