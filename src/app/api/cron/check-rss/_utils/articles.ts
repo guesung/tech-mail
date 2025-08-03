@@ -1,6 +1,7 @@
 import { fetchRssFeed } from "@/lib/rss-parser";
 import { Article, Blog } from "@/types";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const formatArticles = (blog: Blog, articles: any[]): Article[] => {
   return articles.map((article) => ({
     blogName: blog.name,
