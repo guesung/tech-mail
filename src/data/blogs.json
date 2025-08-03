@@ -8,6 +8,14 @@
     "company": true
   },
   {
+    "name": "문동욱",
+    "url": "https://evan-moon.github.io/",
+    "rssUrl": "https://evan-moon.github.io/feed.xml",
+    "logo": "evan-moon.png",
+    "show": true,
+    "company": false
+  },
+  {
     "name": "정현수 기술 블로그",
     "url": "https://junghyeonsu.com/",
     "rssUrl": "https://junghyeonsu.com/rss.xml",
