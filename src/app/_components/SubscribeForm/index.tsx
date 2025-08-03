@@ -1,12 +1,12 @@
 "use client";
+import blogs from "@/data/blogs.json";
 import React from "react";
 import { Controller, useForm } from "react-hook-form";
-import { supabase } from "../../../lib/supabase";
 import { Button } from "../../../components/ui/button";
 import { Card } from "../../../components/ui/card";
 import { Input } from "../../../components/ui/input";
+import { supabase } from "../../../lib/supabase";
 import { BlogSection } from "./BlogSection";
-import blogs from "@/data/blogs.json";
 
 interface FormValues {
   email: string;
