@@ -1,21 +1,10 @@
 import { getSubscribers } from "@/apis/supabase";
 import blogs from "@/data/blogs.json";
+import { fetchTodayArticles } from "./_utils/articles";
 import { sendEmail } from "@/lib/email";
-import { fetchRssFeed } from "@/lib/rss-parser";
-import { Blog } from "@/types";
 import EmailTemplate from "./_components/EmailTemplate";
 
 export const dynamic = "force-dynamic";
-
-const fetchTodayArticles = async (blog: Blog) => {
-  const articles = await fetchRssFeed(blog);
-  return articles.filter((article) => {
-    const publishedAt = new Date(article.publishedAt);
-    const today = new Date();
-
-    return publishedAt.toLocaleDateString() === today.toLocaleDateString();
-  });
-};
 
 const checkRss = async () => {
   const subscribers = await getSubscribers();

@@ -1,0 +1,25 @@
+import { fetchRssFeed } from "@/lib/rss-parser";
+import { Article, Blog } from "@/types";
+
+export const formatArticles = (blog: Blog, articles: any[]): Article[] => {
+  return articles.map((article) => ({
+    blogName: blog.name,
+    title: article.title ?? "",
+    url: article.link ?? "",
+    description: article.contentSnippet ?? article.content ?? "",
+    author: article.creator ?? article.author ?? "",
+    publishedAt: article.isoDate ?? article.pubDate ?? "",
+  }));
+};
+
+export const fetchTodayArticles = async (blog: Blog) => {
+  const articles = await fetchRssFeed(blog.rssUrl);
+  const formattedArticles = formatArticles(blog, articles);
+
+  return formattedArticles.filter((article) => {
+    const publishedAt = new Date(article.publishedAt);
+    const today = new Date();
+
+    return publishedAt.toLocaleDateString() === today.toLocaleDateString();
+  });
+};
