@@ -163,7 +163,7 @@
     "order": 10
   },
   {
-    "name": "김성광의 블로그",
+    "name": "송성광 블로그",
     "url": "https://blog.sungkwang.dev/",
     "rssUrl": "https://blog.sungkwang.dev/rss/",
     "logo": "sungkwang.png",
@@ -172,7 +172,7 @@
     "order": 10
   },
   {
-    "name": "태곤의 블로그",
+    "name": "코드쓰는사람 - 주로 웹 기술을 다룹니다 (김태곤님)",
     "url": "https://taegon.kim/",
     "rssUrl": "https://taegon.kim/feed",
     "logo": "default.png",
@@ -182,7 +182,7 @@
   },
   {
     "name": "milooy",
-    "url": "https://milooy.github.io/rss",
+    "url": "https://milooy.github.io",
     "rssUrl": "https://milooy.github.io/rss",
     "logo": "milooy.png",
     "show": true,
