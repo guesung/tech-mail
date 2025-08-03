@@ -1,6 +1,21 @@
 import { fetchRssFeed } from "@/lib/rss-parser";
 import { Article, Blog } from "@/types";
 
+const isSameDayInKST = (date1: string, date2: Date) => {
+  const kstFormatter = new Intl.DateTimeFormat("ko-KR", {
+    timeZone: "Asia/Seoul",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+
+  const date1KST = new Date(date1);
+  const date1Formatted = kstFormatter.format(date1KST);
+  const date2Formatted = kstFormatter.format(date2);
+
+  return date1Formatted === date2Formatted;
+};
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const formatArticles = (blog: Blog, articles: any[]): Article[] => {
   return articles.map((article) => ({
@@ -18,12 +33,12 @@ export const fetchTodayArticles = async (blog: Blog) => {
     const articles = await fetchRssFeed(blog.rssUrl);
     const formattedArticles = formatArticles(blog, articles);
 
-    return formattedArticles.filter((article) => {
-      const publishedAt = new Date(article.publishedAt);
+    const todayArticles = formattedArticles.filter((article) => {
       const today = new Date();
-
-      return publishedAt.toLocaleDateString() === today.toLocaleDateString();
+      return isSameDayInKST(article.publishedAt, today);
     });
+
+    return todayArticles;
   } catch (e) {
     console.error(`Failed to fetch articles for ${blog.name}: ${e}`);
     return [];
