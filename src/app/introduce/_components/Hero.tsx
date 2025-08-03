@@ -2,21 +2,23 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import blogsData from "@/data/blogs.json";
+
+const texts = [
+  '"아니, 내가 즐겨보던 기술 블로그에 글이 이렇게나 올라왔다고?"',
+  '"매일 기술 블로그를 일일이 확인하느라 시간만 낭비했어요"',
+  '"중요한 기술 트렌드를 놓치고 있다는 불안감이 있었어요"',
+];
 
 export default function Hero() {
   const [currentText, setCurrentText] = useState(0);
-  const texts = [
-    "하루에 15개 정도의 기술 블로그를 구독했어요",
-    "매일 오전 8시에 일괄 전송으로 깔끔하게 정리해요",
-    "관심 있는 기술 트렌드를 놓치지 마세요",
-  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentText((prev) => (prev + 1) % texts.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, [texts.length]);
+  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden">
@@ -75,7 +77,7 @@ export default function Hero() {
 
         {/* 서브타이틀 */}
         <motion.div
-          className="h-20 mb-8"
+          className="h-20 mb-8 w-[800px]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
@@ -120,7 +122,11 @@ export default function Hero() {
             whileHover={{ y: -5 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="text-3xl font-bold text-blue-600 mb-2">20+</div>
+            <div className="text-3xl font-bold text-blue-600 mb-2">
+              {Math.floor(blogsData.filter((blog) => blog.show).length / 10) *
+                10}
+              +
+            </div>
             <div className="text-gray-600">기술 블로그</div>
           </motion.div>
           <motion.div
@@ -129,7 +135,7 @@ export default function Hero() {
             transition={{ duration: 0.2 }}
           >
             <div className="text-3xl font-bold text-purple-600 mb-2">
-              매일 8시
+              매일 7시
             </div>
             <div className="text-gray-600">이메일 알림</div>
           </motion.div>

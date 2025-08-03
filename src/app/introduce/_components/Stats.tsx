@@ -125,7 +125,7 @@ export default function Stats() {
           >
             <div className="text-3xl mb-4">⚡</div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">전송 시간</h3>
-            <p className="text-gray-600">매일 오전 8시 일괄 전송</p>
+            <p className="text-gray-600">매일 오전 7시 일괄 전송</p>
           </motion.div>
           <motion.div
             className="bg-white p-8 rounded-3xl shadow-lg"
