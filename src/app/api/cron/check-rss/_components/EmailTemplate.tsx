@@ -10,6 +10,9 @@ export default function EmailTemplate({
       style={{
         fontFamily:
           'Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+        maxWidth: "600px",
+        margin: "0 auto",
+        backgroundColor: "#ffffff",
       }}
     >
       {/* Header */}
@@ -74,6 +77,7 @@ export default function EmailTemplate({
                   display: "flex",
                   alignItems: "center",
                   gap: "8px",
+                  flexWrap: "wrap",
                 }}
               >
                 <span
@@ -109,6 +113,12 @@ export default function EmailTemplate({
                   fontWeight: "600",
                   color: "#1e293b",
                   lineHeight: "1.4",
+                  wordBreak: "break-word",
+                  display: "-webkit-box",
+                  WebkitLineClamp: "2",
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
                 }}
               >
                 <a
@@ -130,6 +140,12 @@ export default function EmailTemplate({
                     fontSize: "15px",
                     color: "#64748b",
                     lineHeight: "1.5",
+                    wordBreak: "break-word",
+                    display: "-webkit-box",
+                    WebkitLineClamp: "2",
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
                   }}
                 >
                   {article.description}
@@ -143,6 +159,8 @@ export default function EmailTemplate({
                   alignItems: "center",
                   justifyContent: "space-between",
                   marginTop: "16px",
+                  flexWrap: "wrap",
+                  gap: "12px",
                 }}
               >
                 <span
@@ -170,9 +188,10 @@ export default function EmailTemplate({
                     fontWeight: "500",
                     textDecoration: "none",
                     display: "inline-block",
+                    whiteSpace: "nowrap",
                   }}
                 >
-                  읽어보기 →
+                  읽으러 가기 →
                 </a>
               </div>
             </div>
@@ -203,10 +222,11 @@ export default function EmailTemplate({
               display: "flex",
               justifyContent: "center",
               gap: "16px",
+              flexWrap: "wrap",
             }}
           >
             <a
-              href="#"
+              href="https://tech-mail.shop"
               style={{
                 fontSize: "14px",
                 color: "#3b82f6",
@@ -215,8 +235,8 @@ export default function EmailTemplate({
             >
               구독 설정
             </a>
-            <span style={{ color: "#cbd5e1" }}>|</span>
-            <a
+            {/* <span style={{ color: "#cbd5e1" }}>|</span> */}
+            {/* <a
               href="#"
               style={{
                 fontSize: "14px",
@@ -225,7 +245,7 @@ export default function EmailTemplate({
               }}
             >
               구독 취소
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
