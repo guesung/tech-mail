@@ -24,7 +24,7 @@ const sendDailyArticleEmails = async () => {
         subscriber.subscribedBlogIds?.includes(article.blogName) ?? false
     );
 
-    return await sendEmail({
+    await sendEmail({
       from: process.env.NEXT_PUBLIC_FROM_EMAIL!,
       to: subscriber.email,
       subject: "[TechMail] 구독한 블로그 새 글 알림",
