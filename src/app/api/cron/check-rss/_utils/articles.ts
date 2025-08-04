@@ -1,20 +1,8 @@
 import { fetchRssFeed } from "@/lib/rss-parser";
 import { Article, Blog } from "@/types";
 
-const isSameDayInKST = (date1: string, date2: Date) => {
-  const kstFormatter = new Intl.DateTimeFormat("ko-KR", {
-    timeZone: "Asia/Seoul",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  });
-
-  const date1KST = new Date(date1);
-  const date1Formatted = kstFormatter.format(date1KST);
-  const date2Formatted = kstFormatter.format(date2);
-
-  return date1Formatted === date2Formatted;
-};
+const isSameDayInKST = (date1: Date, date2: Date) =>
+  date1.toLocaleDateString("ko-KR") === date2.toLocaleDateString("ko-KR");
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const formatArticles = (blog: Blog, articles: any[]): Article[] => {
@@ -34,8 +22,7 @@ export const fetchTodayArticles = async (blog: Blog) => {
     const formattedArticles = formatArticles(blog, articles);
 
     const todayArticles = formattedArticles.filter((article) => {
-      const today = new Date();
-      return isSameDayInKST(article.publishedAt, today);
+      return isSameDayInKST(new Date(article.publishedAt), new Date());
     });
 
     return todayArticles;
