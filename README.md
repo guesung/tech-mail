@@ -1,10 +1,13 @@
 # Tech Mail : 기술 블로그 메일 구독 서비스
 
-관심 있는 기술 블로그의 새 글을 매일 아침 이메일로 받아보세요.
-
-<img width="728" height="993" alt="image" src="https://github.com/user-attachments/assets/401c4084-caf4-4aea-9888-f021e2ac35b9" />
-
----
+<div align='center'>
+   <h1>Tech Mail</h1>
+   <p>관심 있는 기술 블로그의 새 글을 매일 아침 이메일로 받아보세요.</p>
+   <div>
+      <img width="728" height="993" alt="image" src="https://github.com/user-attachments/assets/401c4084-caf4-4aea-9888-f021e2ac35b9" />
+   </div>
+   <br />
+</div>
 
 ### 🤔 개발 배경
 
