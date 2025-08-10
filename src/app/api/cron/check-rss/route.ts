@@ -17,6 +17,11 @@ const sendDailyArticleEmails = async () => {
     todayArticles.push(...articles);
   }
 
+  // const articles = await Promise.all(
+  //   blogs.filter((blog) => blog.show).map((blog) => fetchTodayArticles(blog))
+  // );
+  // todayArticles.push(...articles.flat());
+
   if (todayArticles.length === 0) return;
 
   for (const subscriber of subscribers) {
