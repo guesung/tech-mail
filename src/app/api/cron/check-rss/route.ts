@@ -14,9 +14,10 @@ const sendDailyArticleEmails = async () => {
   for (const blog of blogs) {
     if (!blog.show) continue;
     const articles = await fetchTodayArticles(blog);
-    console.log(articles);
     todayArticles.push(...articles);
   }
+
+  if (todayArticles.length === 0) return;
 
   for (const subscriber of subscribers) {
     const targetArticles = todayArticles.filter(
