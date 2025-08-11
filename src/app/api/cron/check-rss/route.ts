@@ -22,8 +22,6 @@ const sendDailyArticleEmails = async () => {
   // );
   // todayArticles.push(...articles.flat());
 
-  if (todayArticles.length === 0) return;
-
   for (const subscriber of subscribers) {
     const targetArticles = todayArticles.filter(
       (article) =>
