@@ -22,10 +22,7 @@ export const fetchTodayArticles = async (blog: Blog) => {
     const formattedArticles = formatArticles(blog, articles);
 
     const todayArticles = formattedArticles.filter((article) => {
-      const today = new Date();
-      today.setHours(today.getHours() + 9); // 한국 시간으로 변환
-
-      return isSameDayInKST(new Date(article.publishedAt), today);
+      return isSameDayInKST(new Date(article.publishedAt), new Date());
     });
 
     return todayArticles;
